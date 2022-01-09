@@ -1,0 +1,27 @@
+{
+  "extensionName": {
+    "message": "LC2FFExt",
+    "description": "LC2FFExt Firefox Extension of LetzteChance.org."
+  },
+
+  "extensionDescription": {
+    "message": "Benachrichtigt den Benutzer über Linkklicks",
+    "description": "Description of the extension."
+  },
+
+  "notificationTitle": {
+    "message": "LC2FFExt",
+    "description": "Title of the click notification."
+  },
+
+  "notificationContent": {
+    "message": "Du hast $URL$ angeklickt",
+    "description": "Tells the user which link they clicked.",
+    "placeholders": {
+      "url" : {
+        "content" : "$1",
+        "example" : "https://developer.mozilla.org"
+      }
+    }
+  }
+}

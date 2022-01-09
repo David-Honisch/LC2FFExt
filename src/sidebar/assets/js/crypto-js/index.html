@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>LC2CryptoJS Profile</title>
+
+        <!-- CryptoJS -->
+        <script src="./src/core.js"></script>
+        <script src="./src/x64-core.js"></script>
+        <script src="./src/enc-utf16.js"></script>
+        <script src="./src/enc-base64.js"></script>
+        <script src="./src/md5.js"></script>
+        <script src="./src/sha1.js"></script>
+        <script src="./src/sha256.js"></script>
+        <script src="./src/sha512.js"></script>
+        <script src="./src/sha3.js"></script>
+        <script src="./src/hmac.js"></script>
+        <script src="./src/pbkdf2.js"></script>
+        <script src="./src/evpkdf.js"></script>
+        <script src="./src/cipher-core.js"></script>
+        <script src="./src/mode-cfb.js"></script>
+        <script src="./src/mode-ctr.js"></script>
+        <script src="./src/mode-ofb.js"></script>
+        <script src="./src/mode-ecb.js"></script>
+        <script src="./src/pad-ansix923.js"></script>
+        <script src="./src/pad-iso10126.js"></script>
+        <script src="./src/pad-zeropadding.js"></script>
+        <script src="./src/pad-iso97971.js"></script>
+        <script src="./src/pad-nopadding.js"></script>
+        <script src="./src/rc4.js"></script>
+        <script src="./src/rabbit.js"></script>
+        <script src="./src/aes.js"></script>
+        <script src="./src/tripledes.js"></script>
+
+        <!-- YUI -->
+        <script src="http://yui.yahooapis.com/3.4.1/build/yui/yui-min.js"></script>
+
+        <!-- Profile subjects -->
+		<!--
+        <script src="md5-profile.js"></script>
+        <script src="sha1-profile.js"></script>
+        <script src="sha256-profile.js"></script>
+		-->
+        <script src="sha512-profile.js"></script>
+		<!--
+        <script src="sha3-profile.js"></script>
+        <script src="hmac-profile.js"></script>
+        <script src="pbkdf2-profile.js"></script>
+        <script src="evpkdf-profile.js"></script>
+        <script src="rc4-profile.js"></script>
+        <script src="rabbit-profile.js"></script>
+        <script src="aes-profile.js"></script>
+        <script src="des-profile.js"></script>
+        <script src="tripledes-profile.js"></script>
+		-->
+        <!-- Profile reports -->
+    </head>
+<body>
+<script type="text/javascript">
+var pwd = "secret key 123";
+var catindexenc = [
+"David Honisch",
+"Hauptstrasse 47a",
+"Germany",
+"53721 Siegburg",
+"<a href=\"mailto:david@honisch.org\">david@honisch.org</a>",
+"<a href=\"mailto:webmaster@letztechance.org\">webmaster@letztechance.org</a>"
+];
+//count
+//var catcount = catindexenc.length;
+/*
+catindexenc.forEach(function (s, i, o) {
+	document.writeln(CryptoJS.AES.encrypt(s, pwd));
+	document.writeln("<hr>");
+});
+*/
+var catindex = [
+"U2FsdGVkX19JokGFRqdwimhEITHhLwad0h4SCZYU+JM=",
+"U2FsdGVkX19PYgPlcBJsnTvB66nVbzWHakvYpxxjUUJXCLUzrU9IYR9GS6bn+ebc",
+"U2FsdGVkX19XSSPDuk/twSPP7chzIGxrAoIh36/6H68=",
+"U2FsdGVkX1+zPWS+NnSbtDTYvd6mm/KsT6DWPR0F0QM=",
+"U2FsdGVkX1+m3eYTkD4hAEfyqz7PAstMIFUDCSir290XAwXeuUcspTztxonsaIgX1Av3m1X84ahCtISbDP3n0VJVZo0j501H6J1Nfrtg0Yo=",
+"U2FsdGVkX19QCFaHRpshY0VWTNAX5Iua/QWsdzFwzf6FNMXuoXw7mvBybPk3UTWanJpOcggS+EVhMwDE9CZ639jUCYbfH4JfUpy8XGYPTs20UMI7bKFDn2X8V4rAn6WY"
+];
+catindex.forEach(function (s, i, o) {
+	document.writeln(CryptoJS.AES.decrypt(s.toString(), pwd).toString(CryptoJS.enc.Utf8));
+	document.writeln("<hr>");
+});
+</script>
+</body>
+</html>

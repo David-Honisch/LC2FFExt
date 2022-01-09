@@ -1,6 +1,6 @@
 {
-    "name": "webextensions-examples",
-    "title": "WebExtensions Examples",
+    "name": "lc2ffext",
+    "title": "LC2FFExt - WebExtensions Media Analysis and Downloader",
     "version": "1.0.0",
     "description": "Example Firefox add-ons created using the WebExtensions API",
     "devDependencies": {

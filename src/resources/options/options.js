@@ -24,7 +24,7 @@ var htmlElem = document.querySelector('html');
 
 function populateStorage() {
     localStorage.setItem('title', title);
-    localStorage.setItem('isParseHTML', isParseHTML.checked === true ? true : false);
+    localStorage.setItem('isParseHTML', isParseHTML.checked ? true : false);
 
     // localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
     // localStorage.setItem('font', document.getElementById('font').value);
@@ -95,23 +95,24 @@ try {
         setStorage();
     }
     out.innerHTML = "";
-    out.innerHTML += "isParseHTML:" + (localStorage.getItem('isParseHTML').cheched === true ? 'True' : 'False');
 
     isParseHTML.onchange = populateStorage;
     // bgcolorForm.onchange = populateStorage;
     // fontForm.onchange = populateStorage;
     // imageForm.onchange = populateStorage;
-
     /**
      * Update the UI when the page loads.
      */
     document.addEventListener('DOMContentLoaded', updateUI);
-
     /**
      * Handle update and reset button clicks
      */
     document.querySelector('#update').addEventListener('click', updateShortcut);
     document.querySelector('#reset').addEventListener('click', resetShortcut);
+
+    out.innerHTML += "isParseHTML:" + (localStorage.getItem('isParseHTML').cheched === true ? 'True' : 'False');
+    out.innerHTML += "title:" + (localStorage.getItem('title'));
+
 } catch (e) {
     alert(e);
     alert(e.stack);

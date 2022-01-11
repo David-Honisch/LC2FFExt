@@ -14,9 +14,9 @@
         }
     },
     "icons": {
-        "16": "icons/page-16.png",
-        "32": "icons/page-32.png",
-        "48": "icons/page-48.png"
+        "16": "icons/lc-16.png",
+        "32": "icons/lc-16.png",
+        "48": "icons/lc-16.png"
     },
     "protocol_handlers": [{
         "protocol": "irc",
@@ -25,7 +25,7 @@
     }],
     "content_scripts": [{
             "matches": ["<all_urls>"],
-            "js": ["content_scripts/export.js"]
+            "js": ["js/export.js"]
         },
         {
             "matches": ["<all_urls>"],
@@ -34,7 +34,7 @@
     ],
 
     "background": {
-        "scripts": ["background.js", "bookmark.js", "command.js", "export.js", "filter.js", "notify.js", "message.js", "permissions.js", "rootcert.js", "useragent.js"]
+        "scripts": ["js/background.js", "js/bookmark.js", "js/command.js", "js/export.js", "js/filter.js", "js/notify.js", "js/message.js", "js/permissions.js", "js/rootcert.js", "js/useragent.js"]
     },
 
     "permissions": [
@@ -56,21 +56,21 @@
     },
 
     "options_ui": {
-        "page": "options.html",
+        "page": "resources/options/options.html",
         "browser_style": true
     },
 
 
     "sidebar_action": {
-        "default_icon": "icons/page-32.png",
+        "default_icon": "icons/lc-16.png",
         "default_title": "LetzteChance.Org - Menu",
-        "default_panel": "sidebar/sidebar.html"
+        "default_panel": "resources/sidebar/sidebar.html"
     },
 
     "browser_action": {
-        "default_icon": "icons/page-32.png",
+        "default_icon": "icons/lc-16.png",
         "default_title": "Choose a user agent",
-        "default_popup": "popup/choose_ua.html"
+        "default_popup": "resources/popup/choose_ua.html"
     }
 
 }

@@ -1,23 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-  </head>
+    <link type="text/css" media="all" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" media="all" rel="stylesheet" href="css/style.css" />
+</head>
 
 <body>
-<a href="https://www.letztechance.org"><h1>LetzteChance.Org LC2FFExt</h1></a>
-<h2>Options</h2>
-  <form>
-    <label>Parse HTML:</label>
-    <input type="text" id="isParseHTML" >
-    <br>
-    <label>Keyboard shortcut</label>
-      <input type="text" id="shortcut" >
-      <button id="update">Update keyboard shortcut</button>
-      <button id="reset">Reset  keyboard shortcut</button>
- 
-    </form>
-  <script src="options.js"></script>
+    <a href="options.html">Reload</a>
+    <img src="sidebar/assets/img/logo.svg">
+    <fieldset>
+        <a href="https://www.letztechance.org">
+            <center>
+                <h1 id="title">LC2FFExt</h1>
+            </center>
+        </a>
+    </fieldset>
+
+    <fieldset>
+        <label>Options</label>
+        <form>
+            <fieldset>
+                <label>Keyboard shortcut</label>
+                <input type="text" id="shortcut">
+                <button id="update">Update keyboard shortcut</button>
+                <button id="reset">Reset  keyboard shortcut</button>
+            </fieldset>
+            <fieldset>
+                <label>Parse HTML:</label>
+                <input type="checkbox" id="isParseHTML" checked>
+            </fieldset>
+            <fieldset>
+                <label>Color</label>
+                <div>
+                    <label for="bgcolor">Choose background color:</label>
+                    <input class="color" id="bgcolor" value="FF0000">
+                </div>
+                <div>
+                    <label for="font">Choose font style:</label>
+                    <select id="font">
+        	<option value="'Open Sans Condensed', sans-serif" selected>Sans-serif</option>
+        	<option value="'Bitter', serif">Serif</option>
+        	<option value="'Ubuntu Mono'">Monospace</option>
+        </select>
+                </div>
+                <!-- <div>
+            <label for="image">Choose image:</label>
+            <select id="image">
+        	<option value="images/firefoxos.png" selected>Firefox</option>
+        	<option value="images/crocodile.png">Crocodile</option>
+        	<option value="images/tortoise.png">Tortoise</option>
+        </select>
+        </div> -->
+            </fieldset>
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <label>Local Storage:</label>
+        <div id="localstorage">Loading...</div>
+    </fieldset>
+
+    <footer></footer>
+
+    </div>
+    <script src="options.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,14 @@
 'use strict';
+document.cookie = "name=lc-api; SameSite=None; Secure";
+document.cookie = "lc-api=lc-api; SameSite=None; Secure";
+
+function getCookie() {
+    return document.cookie;
+}
+
+function setCookie(title) {
+    document.cookie = encodeURIComponent("name=" + title + "; SameSite=None; Secure");
+}
 
 function saveLocal(title, value) {
     localStorage.setItem(title, value);
@@ -8,27 +18,6 @@ function getItem(title) {
     return localStorage.getItem(title);
 }
 
-function populateStorage() {
-    saveLocal('title', title);
-    saveLocal('isParseHTML', isParseHTML.checked ? true : false);
-
-    // localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-    // localStorage.setItem('font', document.getElementById('font').value);
-    // localStorage.setItem('image', document.getElementById('image').value);
-    setStorage();
-}
-
-function setStorage() {
-    document.getElementById('title').value = getItem('title');
-    document.getElementById('isParseHTML').checked = getItem('isParseHTML') === true ? true : false;
-    // document.getElementById('bgcolor').value = localStorage.getItem('bgcolor');
-    // document.getElementById('font').value = localStorage.getItem('font');
-    // document.getElementById('image').value = localStorage.getItem('image');
-    // htmlElem.style.backgroundColor = '#' + currentColor;
-    // pElem.style.fontFamily = currentFont;
-    isParseHTML.cheched = getItem('isParseHTML') === true ? true : false;
-    // imgElem.setAttribute('src', currentImage);
-}
 /**
  * TODO:Update the UI: set the value of the shortcut textbox.
  */
@@ -69,5 +58,27 @@ async function updateShortcut() {
 async function resetShortcut() {
     await browser.commands.reset(commandName);
     updateUI();
+}
+//deprecated api - use object as param
+function populateStorage() {
+    saveLocal('title', title);
+    saveLocal('isParseHTML', isParseHTML.checked ? true : false);
+
+    // localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
+    // localStorage.setItem('font', document.getElementById('font').value);
+    // localStorage.setItem('image', document.getElementById('image').value);
+    setStorage();
+}
+//deprecated api - use object as param
+function setStorage() {
+    document.getElementById('title').value = getItem('title');
+    document.getElementById('isParseHTML').checked = getItem('isParseHTML') === true ? true : false;
+    // document.getElementById('bgcolor').value = localStorage.getItem('bgcolor');
+    // document.getElementById('font').value = localStorage.getItem('font');
+    // document.getElementById('image').value = localStorage.getItem('image');
+    // htmlElem.style.backgroundColor = '#' + currentColor;
+    // pElem.style.fontFamily = currentFont;
+    isParseHTML.cheched = getItem('isParseHTML') === true ? true : false;
+    // imgElem.setAttribute('src', currentImage);
 }
 //main part

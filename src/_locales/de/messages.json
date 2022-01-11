@@ -1,27 +1,35 @@
 {
-  "extensionName": {
-    "message": "LC2FFExt",
-    "description": "LC2FFExt Firefox Extension of LetzteChance.org."
-  },
+    "extensionName": {
+        "message": "LC2FFExt",
+        "homepage": "LC2FFExt",
+        "updateurl": "LC2FFExt",
+        "product": "LC2FFExt Web Extension",
+        "description": "LC2FFExt Firefox Extension of LetzteChance.org."
+    },
+    "product": {
+        "message": "LetzteChance.org LC2FFExt Firefox Extension 2022.",
+        "description": "LetzteChance.org LC2FFExt Firefox Extension 2022 - The official Firefox Extension of LetzteChance.org."
+    },
 
-  "extensionDescription": {
-    "message": "Benachrichtigt den Benutzer über Linkklicks",
-    "description": "Description of the extension."
-  },
 
-  "notificationTitle": {
-    "message": "LC2FFExt",
-    "description": "Title of the click notification."
-  },
+    "extensionDescription": {
+        "message": "Benachrichtigt den Benutzer über Linkklicks",
+        "description": "Description of the extension."
+    },
 
-  "notificationContent": {
-    "message": "Du hast $URL$ angeklickt",
-    "description": "Tells the user which link they clicked.",
-    "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
-      }
+    "notificationTitle": {
+        "message": "LC2FFExt",
+        "description": "LC2FFExt is a web extension for web data analysis"
+    },
+
+    "notificationContent": {
+        "message": "Du hast $URL$ angeklickt",
+        "description": "Tells the user which link they clicked.",
+        "placeholders": {
+            "url": {
+                "content": "$1",
+                "host": "https://www.letztechance.org"
+            }
+        }
     }
-  }
 }

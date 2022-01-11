@@ -1,3 +1,4 @@
+document.cookie = "name=lc-options; SameSite=None; Secure";
 const title = 'LC2FFExt';
 const options = [{
         commandName: 'toggle-feature',
@@ -42,8 +43,12 @@ try {
     document.querySelector('#update').addEventListener('click', updateShortcut);
     document.querySelector('#reset').addEventListener('click', resetShortcut);
 
-    out.innerHTML += "isParseHTML:" + (localStorage.getItem('isParseHTML').cheched === true ? 'True' : 'False');
-    out.innerHTML += "title:" + (localStorage.getItem('title'));
+    out.innerHTML += "</br>product:" + browser.i18n.getMessage("product");
+    out.innerHTML += "</br>isParseHTML:" + (getItem('isParseHTML').cheched === true ? 'True' : 'False');
+    out.innerHTML += "</br>title:" + (getItem('title'));
+    out.innerHTML += "</br>cookie:" + getCookie();
+    setCookie('test');
+    out.innerHTML += "</br>cookie:" + JSON.stringify(getCookie());
 
 } catch (e) {
     alert(e);

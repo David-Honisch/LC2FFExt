@@ -7,8 +7,10 @@ body {
 }
 
 fieldset {
-    border: 1px #000000;
-    border-radius: 4px;
+    /* border: 2px #000000; */
+    border-top: #ffffff;
+    border-left: #ffffff;
+    border-radius: 8px;
 }
 
 p.bg-danger,

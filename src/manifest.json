@@ -71,7 +71,7 @@
     "browser_action": {
         "default_icon": "icons/lc-16.png",
         "default_title": "Choose a user agent",
-        "default_popup": "resources/popup/choose_ua.html"
+        "default_popup": "resources/popup/choose.html"
     }
 
 }

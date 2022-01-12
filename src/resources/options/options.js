@@ -11,6 +11,7 @@ const options = [{
 ];
 var isParseHTML = document.getElementById('isParseHTML');
 var out = document.getElementById('localstorage');
+var btnOptionSubmit = document.getElementById('btnOptionSubmit');
 
 var htmlElem = document.querySelector('html');
 // var pElem = document.querySelector('p');
@@ -30,6 +31,7 @@ try {
     out.innerHTML = "";
 
     isParseHTML.onchange = populateStorage;
+    btnOptionSubmit.addEventListener('click', populateStorage);
     // bgcolorForm.onchange = populateStorage;
     // fontForm.onchange = populateStorage;
     // imageForm.onchange = populateStorage;
@@ -44,10 +46,10 @@ try {
     document.querySelector('#reset').addEventListener('click', resetShortcut);
 
     out.innerHTML += "</br>product:" + browser.i18n.getMessage("product");
-    out.innerHTML += "</br>isParseHTML:" + (getItem('isParseHTML').cheched === true ? 'True' : 'False');
+    out.innerHTML += "</br>isParseHTML:" + (getItem('isParseHTML') === true ? true : false);
     out.innerHTML += "</br>title:" + (getItem('title'));
     out.innerHTML += "</br>cookie:" + getCookie();
-    setCookie('test');
+    setCookie(browser.i18n.getMessage("product"));
     out.innerHTML += "</br>cookie:" + JSON.stringify(getCookie());
 
 } catch (e) {

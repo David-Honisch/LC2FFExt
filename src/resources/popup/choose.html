@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="choose_ua.css" />
+    <script src="../sidebar/assets/js/lib/jquery-2.1.3.min.js"></script>
+</head>
+
+<body>
+    <h1 id="title">LC2FFExt</h1>
+    <fieldset>
+        <label>Options</label>
+        <div id="choose">
+            <select>
+                <option value="all">all</option>            
+            </select>
+            <br>
+            <label id="isParseHTMLlabel">DSGVO (on/off)</label>
+            <input type="checkbox" id="isDSGVO" name="isDSGVO" checked />
+
+            <label id="isParseHTMLlabel">isParseHTML</label>
+            <input type="checkbox" id="isParseHTML" name="isParseHTML" checked />
+
+            <br><label id="searchpatternlabel">search pattern</label>
+            <input type="text" id="pattern" name="pattern" />
+            <br><label id="bodylabel">body</label>
+            <input type="text" id="body" name="body" />
+        </div>
+    </fieldset>
+    <fieldset>
+        <label>Ext Options</label>
+        <div id="extchoose">
+            <select>
+                <option value="all">all</option>
+            </select>
+        </div>
+    </fieldset>
+    <fieldset>
+        <label>User Agent:</label>
+        <div class="ua-choices">
+            <div class="ua-choice">Firefox 65</div>
+            <div class="ua-choice">Firefox 64</div>
+            <div class="ua-choice">Firefox 55</div>
+            <div class="ua-choice">Firefox 41</div>
+            <div class="ua-choice">Chrome 41</div>
+            <div class="ua-choice">Safari 41</div>
+            <div class="ua-choice">IE 11</div>
+            <div class="ua-choice">IE 10</div>
+            <div class="ua-choice">IE 9</div>
+            <div class="ua-choice">IE 8</div>
+        </div>
+    </fieldset>
+    <script src="choose_ua.js"></script>
+</body>
+
+</html>

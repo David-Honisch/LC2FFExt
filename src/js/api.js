@@ -118,24 +118,35 @@ async function resetShortcut() {
 }
 //deprecated api - use object as param
 function populateStorage() {
+    alert("populateStorage");
+    console.log("populateStorage");
     saveLocal('title', title);
-    saveLocal('isParseHTML', isParseHTML.checked ? true : false);
+    var isParseHTML = (document.getElementById('isParseHTML').checked === true ? true : false);
+    alert(isParseHTML);
+    saveLocal('isParseHTML', isParseHTML);
 
     // localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
     // localStorage.setItem('font', document.getElementById('font').value);
     // localStorage.setItem('image', document.getElementById('image').value);
     setStorage();
+    alert("populateStorage done");
 }
 //deprecated api - use object as param
 function setStorage() {
+    alert("setStorage");
+    console.log("setStorage");
     document.getElementById('title').value = getItem('title');
-    document.getElementById('isParseHTML').checked = getItem('isParseHTML') === true ? true : false;
+    var isParseHTML = (document.getElementById('isParseHTML').checked === true ? true : false);
+    alert(isParseHTML);
+    document.getElementById('isParseHTML').checked = (getItem('isParseHTML') === true ? true : false);
     // document.getElementById('bgcolor').value = localStorage.getItem('bgcolor');
     // document.getElementById('font').value = localStorage.getItem('font');
     // document.getElementById('image').value = localStorage.getItem('image');
     // htmlElem.style.backgroundColor = '#' + currentColor;
     // pElem.style.fontFamily = currentFont;
-    isParseHTML.cheched = getItem('isParseHTML') === true ? true : false;
+    document.getElementById('isParseHTML').checked = getItem('isParseHTML');
     // imgElem.setAttribute('src', currentImage);
+    alert(isParseHTML);
+    alert("setStorage done");
 }
 //main part

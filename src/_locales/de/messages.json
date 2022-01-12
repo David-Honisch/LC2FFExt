@@ -10,6 +10,10 @@
         "message": "LetzteChance.org LC2FFExt Firefox Extension 2022.",
         "description": "LetzteChance.org LC2FFExt Firefox Extension 2022 - The official Firefox Extension of LetzteChance.org."
     },
+    "eaten": {
+        "message": "LetzteChance.org LC2FFExt eats this page.",
+        "description": "LetzteChance.org LC2FFExt Firefox Extension 2022 - The official Firefox Extension of LetzteChance.org."
+    },
 
 
     "extensionDescription": {

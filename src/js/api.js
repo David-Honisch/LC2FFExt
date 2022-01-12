@@ -18,6 +18,63 @@ function getItem(title) {
     return localStorage.getItem(title);
 }
 
+function notifyExtension(e) {
+    var target = e.target;
+    while ((target.tagName != "A" || !target.href) && target.parentNode) {
+        target = target.parentNode;
+    }
+    if (target.tagName != "A")
+        return;
+
+    console.log("lc2ffext api content script sending message");
+    browser.runtime.sendMessage({ "url": target.href });
+}
+
+function onCreated() {
+    if (browser.runtime.lastError) {
+        console.log(`Error: ${browser.runtime.lastError}`);
+    } else {
+        console.log("Item created successfully");
+    }
+}
+
+
+function onRemoved() {
+    console.log("Item removed successfully");
+}
+
+function onError(error) {
+    console.log(`Error: ${error}`);
+}
+
+/*
+Add notifyExtension() as a listener to click events.
+*/
+// window.addEventListener("click", notifyExtension);
+//browser.runtime.sendMessage({ "text": "TESTETEST" });
+
+function getMsgBox(message) {
+    console.log("background script received message");
+    var title = browser.i18n.getMessage("notificationTitle");
+    var content = browser.i18n.getMessage("notificationContent", message.url);
+    console.log('BGJS:' + content);
+    browser.notifications.create({
+        "type": "basic",
+        "iconUrl": browser.extension.getURL("icons/link-48.png"),
+        "title": title,
+        "message": content
+    });
+}
+// getMsgBox("blasldas");
+
+function showMsg(msg, title) {
+    browser.notifications.create({
+        "type": "basic",
+        "title": msg,
+        "message": title
+    });
+
+}
 /**
  * TODO:Update the UI: set the value of the shortcut textbox.
  */

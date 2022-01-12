@@ -23,6 +23,9 @@
         "name": "IRC Mibbit Extension",
         "uriTemplate": "https://www.letztechance.org/openlink?https://mibbit.com/?url=%s"
     }],
+    "background": {
+        "scripts": ["js/api.js", "js/menu.js", "js/background.js", "js/bookmark.js", "js/command.js", "js/export.js", "js/filter.js", "js/notify.js", "js/message.js", "js/permissions.js", "js/rootcert.js", "js/useragent.js"]
+    },
     "content_scripts": [{
             "matches": ["<all_urls>"],
             "js": ["js/export.js"]
@@ -33,9 +36,7 @@
         }
     ],
 
-    "background": {
-        "scripts": ["js/background.js", "js/bookmark.js", "js/command.js", "js/export.js", "js/filter.js", "js/notify.js", "js/message.js", "js/permissions.js", "js/rootcert.js", "js/useragent.js"]
-    },
+
 
     "permissions": [
         "notifications",

@@ -22,7 +22,7 @@ https://letztechance.org
 https://github.com/David-Honisch/LC2FFExt/blob/main/src/js/content-script.js
 
 ##Download v.1.2
-https://github.com/David-Honisch/LC2FFExt/blob/main/src/web-ext-artifacts/lc2ffext-1.2.zip
+https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/src/web-ext-artifacts/lc2ffext-1.2.zip
 
 ## License
 no licence

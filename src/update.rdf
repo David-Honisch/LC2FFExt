@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <r:RDF xmlns:r="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.mozilla.org/2004/em-rdf#">
-	<r:Description about="urn:mozilla:extension:{xxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx}">
+	<r:Description about="urn:mozilla:extension:{c55f768c-d2bf-4587-97f8-8a43cbc5d259}">
 		<updates>
 		<r:Seq>
 		<r:li>
@@ -8,17 +8,17 @@
 			<version>0.1</version>
 			<targetApplication>
 				<r:Description>
-					<id>{xxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx}</id>
-					<minVersion>0.7</minVersion>
+					<id>{c55f768c-d2bf-4587-97f8-8a43cbc5d259}</id>
+					<minVersion>1.2</minVersion>
 					<maxVersion>1.5</maxVersion>
-					<updateLink>http://letztechance.org/lcExtension/lcExtension.xpi</updateLink>
+					<updateLink>https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/src/web-ext-artifacts/lc2ffext-1.2.zip</updateLink>
 				</r:Description>
 			</targetApplication>
 		</r:Description>
 		</r:li>
 		</r:Seq>
 		</updates>
-		<version>0.1</version>
-		<updateLink>http://letztechance.org/lcExtension/lcExtension.xpi</updateLink>
+		<version>1.2</version>
+		<updateLink>https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/src/web-ext-artifacts/lc2ffext-1.2.zip</updateLink>
 	</r:Description>
 </r:RDF>

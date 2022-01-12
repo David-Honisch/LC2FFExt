@@ -18,6 +18,9 @@ https://letztechance.org
 #Current package declaration
 <a href="package.json">package.json</a>
 
+#Content Script -> Reading document and add something
+https://github.com/David-Honisch/LC2FFExt/blob/main/src/js/content-script.js
+
 ## License
 no licence
 (c)by webmaster@letztechance.org

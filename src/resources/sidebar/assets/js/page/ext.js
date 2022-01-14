@@ -26,6 +26,10 @@ var user;
 var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
 var pathArray = window.location.pathname.split('/');
 var secondLevelLocation = pathArray[0];
+var tabs = ["home", "rss feeds", "info", "export"];
+// var dropdown1 = ["Chat", "IRC", "ICQ", "Jabber", "Skype", "Whatsapp"];
+// var dropdown2 = ["EXCEL", "PDF", "WORD", "ZIP"];
+
 var dropdown1 = ["Chat", "Flickr", "IRC", "ICQ", "Jabber", "Skype", "Whatsapp"];
 var dropdown2 = ["EXCEL", "PDF", "WORD", "ZIP"];
 var LIST = {};
@@ -36,10 +40,7 @@ function Home() {
     this.oCharts = new Charts();
 
 
-    this.getTabHead = function getTabHead(subject) {
-        var tabs = ["home", "rss feeds", "info", "export"];
-        var dropdown1 = ["Chat", "IRC", "ICQ", "Jabber", "Skype", "Whatsapp"];
-        var dropdown2 = ["EXCEL", "PDF", "WORD", "ZIP"];
+    this.getTabHead = function getTabHead(tabs) {
         var tabHeader = "<li role=\"presentation\" class=\"active\"><a href=\"#home\" id=\"home-tab\" role=\"tab\" data-toggle=\"tab\" aria-controls=\"home\" aria-expanded=\"true\">" +
             msg(tabs[0]) + "</a></li>";
         tabHeader += "<li role=\"presentation\" class=\"\"><a href=\"#rss\" id=\"rss-tab\" role=\"tab\" data-toggle=\"tab\" aria-controls=\"home\" aria-expanded=\"true\">" +
@@ -73,9 +74,11 @@ $(function() {
     var result = "";
     var index = 1;
     var page = 1;
-    var html = new HTML();
-    var oHome = new Home();
+    var html;
+    var oHome;
     try {
+        html = new HTML();
+        oHome = new Home();
         getPreloader("home", "#out");
 
         var title = "<h3>LetzteChance.Org</h3><h2 style=\"margin-top:0;\">LC2FFExt</h2> \n";
@@ -85,7 +88,7 @@ $(function() {
 
         result += getBoxFluid(title);
         // tabs
-        var tabHeader = oHome.getTabHead("RSS Feeds");
+        var tabHeader = oHome.getTabHead(tabs);
         var tabContent = oHome.getTabBody();
         result += getBoxFluid(getTabs("sTab", tabHeader, tabContent));
         // eof tbs

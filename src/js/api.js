@@ -118,26 +118,26 @@ async function resetShortcut() {
 }
 //deprecated api - use object as param
 function populateStorage() {
-    alert("populateStorage");
+    // alert("populateStorage");
     console.log("populateStorage");
     saveLocal('title', title);
     var isParseHTML = (document.getElementById('isParseHTML').checked === true ? true : false);
-    alert(isParseHTML);
+    // alert(isParseHTML);
     saveLocal('isParseHTML', isParseHTML);
 
     // localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
     // localStorage.setItem('font', document.getElementById('font').value);
     // localStorage.setItem('image', document.getElementById('image').value);
     setStorage();
-    alert("populateStorage done");
+    // alert("populateStorage done");
 }
 //deprecated api - use object as param
 function setStorage() {
-    alert("setStorage");
+    // alert("setStorage");
     console.log("setStorage");
     document.getElementById('title').value = getItem('title');
     var isParseHTML = (document.getElementById('isParseHTML').checked === true ? true : false);
-    alert(isParseHTML);
+    // alert(isParseHTML);
     document.getElementById('isParseHTML').checked = (getItem('isParseHTML') === true ? true : false);
     // document.getElementById('bgcolor').value = localStorage.getItem('bgcolor');
     // document.getElementById('font').value = localStorage.getItem('font');
@@ -146,7 +146,7 @@ function setStorage() {
     // pElem.style.fontFamily = currentFont;
     document.getElementById('isParseHTML').checked = getItem('isParseHTML');
     // imgElem.setAttribute('src', currentImage);
-    alert(isParseHTML);
-    alert("setStorage done");
+    // alert(isParseHTML);
+    // alert("setStorage done");
 }
 //main part

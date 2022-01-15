@@ -43,10 +43,11 @@ function Home() {
     this.getTabHead = function getTabHead(tabs) {
         var tabHeader = "<li role=\"presentation\" class=\"active\"><a href=\"#home\" id=\"home-tab\" role=\"tab\" data-toggle=\"tab\" aria-controls=\"home\" aria-expanded=\"true\">" +
             msg(tabs[0]) + "</a></li>";
+        tabHeader += "<li role=\"presentation\" class=\"\"><a href=\"#options\" role=\"tab\" id=\"profile-tab\" data-toggle=\"tab\" aria-controls=\"options\" aria-expanded=\"false\">" +
+            msg("options") + "</a></li>";
         tabHeader += "<li role=\"presentation\" class=\"\"><a href=\"#rss\" id=\"rss-tab\" role=\"tab\" data-toggle=\"tab\" aria-controls=\"home\" aria-expanded=\"true\">" +
             msg(tabs[1]) + "</a></li>";
-        tabHeader += "<li role=\"presentation\" class=\"\"><a href=\"#more\" role=\"tab\" id=\"profile-tab\" data-toggle=\"tab\" aria-controls=\"profile\" aria-expanded=\"false\">" +
-            msg("external") + "</a></li>";
+
         tabHeader += this.oHTML.createDropDown("info", dropdown1);
         tabHeader += this.oHTML.createDropDown("export", dropdown2);
         return tabHeader;
@@ -56,6 +57,11 @@ function Home() {
         tabContent += "<div id=\"myTabContent\" class=\"tab-content\"> ";
         tabContent += "<div role=\"tabpanel\" class=\"tab-pane fade active in\" id=\"home\" aria-labelledby=\"home-tab\">";
         tabContent += this.oHTML.getHomeExtensionMenu();
+        tabContent += "</div>";
+
+        tabContent += "<div role=\"tabpanel\" class=\"tab-pane fade\" id=\"options\" aria-labelledby=\"options-tab\">";
+        tabContent += "Loading...";
+        tabContent += "</div>";
         tabContent += "</div>";
 
         tabContent += "<div role=\"tabpanel\" class=\"tab-pane fade\" id=\"rss\" aria-labelledby=\"profile-tab\">";
@@ -104,7 +110,7 @@ function _getIndex(url, id) {
             function(data) {
                 // $('#home').append('COUNT:' + data.list);
                 for (var v in data.list) {
-                    result += "<li><a href=\"\">" + data.list[v].name + "</a></li>";
+                    result += "<li><a href=\"https://www.letztechance.org/list-" + data.list[v].id + "-1.html\">" + data.list[v].name + "</a></li>";
                 }
                 $(id).append(result);
             });
@@ -166,8 +172,9 @@ function _getEnv(url, id) {
         });
         p1.then(
             function(data) {
-                for (var v in data) {
-                    result += '<li><a href="https://www.letztechance.org/read-22-' + data[v] + '.html">' + data[v] + '</a></li>';
+                // $("#home").append(JSON.stringify(data));
+                for (var v in data.page.log) {
+                    result += '<li>' + JSON.stringify(data.page.log[v]) + '</a></li>';
                 }
                 $(id).append(result);
             });
@@ -187,7 +194,7 @@ function _getISP(url, id) {
         p1.then(
             function(data) {
                 for (var v in data) {
-                    result += '<li><a href="https://www.letztechance.org/read-22-' + data[v] + '.html">' + data[v] + '</a></li>';
+                    result += '<li>' + data[v] + '</li>';
                 }
                 $(id).append(result);
             });

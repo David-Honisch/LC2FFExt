@@ -13,7 +13,7 @@
     <fieldset>
         <a href="https://www.letztechance.org">
             <center>
-                <h1 id="title">LC2FFExt</h1>
+                <h1 id="hptitle">LC2FFExt</h1>
             </center>
         </a>
     </fieldset>
@@ -22,18 +22,26 @@
         <label>Options</label>
         <form>
             <fieldset>
-                <label>Keyboard shortcut</label>
-                <input type="text" id="shortcut">
-                <button id="update">Update keyboard shortcut</button>
-                <button id="reset">Reset  keyboard shortcut</button>
-            </fieldset>
-            <fieldset>
+                <label>Title:</label>
+                <input type="text" id="title"><br>
                 <label>DSGVO:</label>
                 <input type="checkbox" id="isDSGVO">
             </fieldset>
             <fieldset>
+                <label>Dom Replacement:</label>
+                <input type="checkbox" id="isDOMReplaced">
+
+            </fieldset>
+            <fieldset>
                 <label>Parse HTML:</label>
                 <input type="checkbox" id="isParseHTML">
+                <textarea id="replaceText" cols="60" rows="10"></textarea>
+            </fieldset>
+            <fieldset>
+                <label>Keyboard shortcut</label>
+                <input type="text" id="shortcut">
+                <button id="update">Update keyboard shortcut</button>
+                <button id="reset">Reset  keyboard shortcut</button>
             </fieldset>
             <fieldset>
                 <label>Color</label>
@@ -70,6 +78,7 @@
     <footer></footer>
 
     </div>
+    <script src="../../resources/sidebar/assets/js/lib/jquery-2.1.3.min.js"></script>
     <script src="../../js/api.js"></script>
 
     <script src="options.js"></script>

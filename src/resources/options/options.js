@@ -9,7 +9,6 @@ const options = [{
         value: '#IsDSGVO'
     }
 ];
-var isParseHTML = document.getElementById('isParseHTML');
 var out = document.getElementById('localstorage');
 var btnOptionSubmit = document.getElementById('btnOptionSubmit');
 
@@ -20,18 +19,43 @@ var htmlElem = document.querySelector('html');
 // var fontForm = document.getElementById('font');
 // var imageForm = document.getElementById('image');
 //main part
+function printOptions(out) {
+    try {
+
+
+        out.innerHTML = "</br>product:" + (getItem('product'));
+        out.innerHTML += "</br>title:" + (getItem('title'));
+        out.innerHTML += "</br>isDSGVO:" + (getItem('isDSGVO'));
+        out.innerHTML += "</br>isParseHTML:" + (getItem('isParseHTML'));
+        out.innerHTML += "</br>isDOMReplaced:" + (getItem('isDOMReplaced'));
+        out.innerHTML += "</br>replaceText:" + (getItem('replaceText'));
+
+        // out.innerHTML += "</br>cookie:" + getCookie();
+        // out.innerHTML += "</br>cookie:" + JSON.stringify(getCookie());
+    } catch (error) {
+        alert(e);
+        alert(e.stack);
+        console.error(e.stack);
+    }
+}
 console.log("Ext running...");
 try {
+    out.innerHTML = "";
+    var product = browser.i18n.getMessage("product");
+    var eaten = browser.i18n.getMessage("eaten");
+    $('#hptitle').html(product);
+    $('#title').html(product);
 
-    if (!getItem('isParseHTML')) {
+    $('#replaceText').html(product + eaten);
+
+    if (!getItem('title') || !getItem('isDSGVO') || !getItem('isParseHTML') || !getItem('isDOMReplaced')) {
         populateStorage();
     } else {
         setStorage();
     }
-    out.innerHTML = "";
 
-    isParseHTML.onchange = populateStorage;
-    btnOptionSubmit.addEventListener('click', populateStorage);
+    // isParseHTML.onchange = populateStorage;
+
     // bgcolorForm.onchange = populateStorage;
     // fontForm.onchange = populateStorage;
     // imageForm.onchange = populateStorage;
@@ -44,18 +68,13 @@ try {
      */
     document.querySelector('#update').addEventListener('click', updateShortcut);
     document.querySelector('#reset').addEventListener('click', resetShortcut);
-
-    out.innerHTML += "</br>product:" + browser.i18n.getMessage("product");
-    out.innerHTML += "</br>isParseHTML:" + (getItem('isParseHTML') === true ? true : false);
-    out.innerHTML += "</br>title:" + (getItem('title'));
-    out.innerHTML += "</br>cookie:" + getCookie();
     setCookie(browser.i18n.getMessage("product"));
-    out.innerHTML += "</br>cookie:" + JSON.stringify(getCookie());
 
+    btnOptionSubmit.addEventListener('click', setStorage);
+
+    printOptions(out);
 } catch (e) {
     alert(e);
     alert(e.stack);
     console.error(e.stack);
 }
-
-// alert('Welcome to ' + title + ' Browser Extension.');

@@ -3,6 +3,10 @@ function saveLocal(title, value) {
     localStorage.setItem(title, value);
 }
 
+function getItem(title) {
+    return localStorage.getItem(title);
+}
+
 function setCookie(title) {
     document.cookie = encodeURIComponent(title) + "=" + encodeURIComponent(title) + "; SameSite=None; Secure";
 }
@@ -20,20 +24,21 @@ function notifyExtension(e) {
     browser.runtime.sendMessage({ "url": target.href });
 }
 
+//just eat the page
 function replaceContent(k, v) {
-    //just eat the page
-    // document.body.textContent = "";
     var header = document.createElement(k);
-    var title = browser.i18n.getMessage("notificationTitle");
-    header.textContent += browser.i18n.getMessage(v);
+    console.log(k + "" + v);
+    header.textContent = v;
     document.body.appendChild(header);
 }
 try {
     console.log("lc content-script running");
-    replaceContent('h1', 'eaten')
-        /*
-        Add notifyExtension() as a listener to click events.
-        */
+    var replaceCnt = getItem('replaceText');
+    replaceCnt = (replaceCnt !== undefined && replaceCnt !== null) ? replaceCnt : browser.i18n.getMessage("eaten");
+    replaceContent('h1', replaceCnt);
+    /*
+    Add notifyExtension() as a listener to click events.
+    */
     window.addEventListener("click", notifyExtension);
     console.log("lc content-script done.");
 } catch (error) {

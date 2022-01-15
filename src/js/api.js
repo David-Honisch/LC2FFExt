@@ -118,13 +118,20 @@ async function resetShortcut() {
 }
 //deprecated api - use object as param
 function populateStorage() {
-    // alert("populateStorage");
     console.log("populateStorage");
+    var title = document.getElementById('title').innerHTML;
     saveLocal('title', title);
-    var isParseHTML = (document.getElementById('isParseHTML').checked === true ? true : false);
-    // alert(isParseHTML);
+    saveLocal('product', title);
+    //var isParseHTML = (document.getElementById('isParseHTML').checked === true ? true : false);
+    var isParseHTML = document.getElementById('isParseHTML').checked === true ? true : false;
+    var isDSGVO = document.getElementById('isDSGVO').checked === true ? true : false;
+    var isDOMReplaced = document.getElementById('isDOMReplaced').checked === true ? true : false;
+    var replaceText = $('#replaceText').val();
+    saveLocal('replaceText', replaceText);
     saveLocal('isParseHTML', isParseHTML);
-
+    saveLocal('isDSGVO', isDSGVO);
+    saveLocal('isDOMReplaced', isDOMReplaced);
+    // alert("isDSGVO:" + isDSGVO + "isParseHTML:" + isParseHTML + " isDOMReplaced:" + isDOMReplaced);
     // localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
     // localStorage.setItem('font', document.getElementById('font').value);
     // localStorage.setItem('image', document.getElementById('image').value);
@@ -133,20 +140,66 @@ function populateStorage() {
 }
 //deprecated api - use object as param
 function setStorage() {
-    // alert("setStorage");
-    console.log("setStorage");
-    document.getElementById('title').value = getItem('title');
-    var isParseHTML = (document.getElementById('isParseHTML').checked === true ? true : false);
-    // alert(isParseHTML);
-    document.getElementById('isParseHTML').checked = (getItem('isParseHTML') === true ? true : false);
-    // document.getElementById('bgcolor').value = localStorage.getItem('bgcolor');
-    // document.getElementById('font').value = localStorage.getItem('font');
-    // document.getElementById('image').value = localStorage.getItem('image');
-    // htmlElem.style.backgroundColor = '#' + currentColor;
-    // pElem.style.fontFamily = currentFont;
-    document.getElementById('isParseHTML').checked = getItem('isParseHTML');
-    // imgElem.setAttribute('src', currentImage);
-    // alert(isParseHTML);
-    // alert("setStorage done");
+    try {
+        // alert("setStorage");
+        console.log("setStorage");
+        var title = document.getElementById('title').innerHTML;
+        saveLocal('title', title);
+        document.getElementById('title').value = getItem('title');
+        saveLocal('product', title);
+        var replaceText = $('#replaceText').val();
+        saveLocal('replaceText', replaceText);
+        var isParseHTML = document.getElementById('isParseHTML').checked === true ? true : false;
+        var isDSGVO = document.getElementById('isDSGVO').checked === true ? true : false;
+        var isDOMReplaced = document.getElementById('isDOMReplaced').checked === true ? true : false;
+        saveLocal('isParseHTML', isParseHTML);
+        saveLocal('isDSGVO', isDSGVO);
+        saveLocal('isDOMReplaced', isDOMReplaced);
+        printOptions(document.getElementById('localstorage'));
+        // alert("Storage isDSGVO:" + isDSGVO + "isParseHTML:" + isParseHTML + " isDOMReplaced:" + isDOMReplaced);
+        // printOptions(document.getElementById('localstorage'));
+        // alert('Storage isParseHTML:' + isParseHTML +  " isDOMReplaced:" + isDOMReplaced);
+        //init    
+        // document.getElementById('isDSGVO').checked = isParseHTML;
+        // document.getElementById('isParseHTML').checked = isDSGVO;
+        //$('#isDSGVO').prop('checked', isDSGVO);
+        // $('#isDSGVO').prop('checked', isDSGVO);
+        // alert("isDSGVO:" + (isDSGVO === true ? true : false));
+        if (isDSGVO) {
+            $('#isDSGVO').prop('checked', true);
+        } else {
+            $('#isDSGVO').prop('checked', false);
+        }
+        if (isParseHTML) {
+            $('#isParseHTML').prop('checked', true);
+        } else {
+            $('#isParseHTML').prop('checked', false);
+        }
+        if (isDOMReplaced) {
+            $('#isDOMReplaced').prop('checked', true);
+        } else {
+            $('#isDOMReplaced').prop('checked', false);
+        }
+        // alert("After Storage isDSGVO:" + isDSGVO + "isParseHTML:" + isParseHTML + " isDOMReplaced:" + isDOMReplaced);
+        // $('#isParseHTML').prop('checked', isParseHTML);
+        //$('#isDOMReplaced').prop('checked', (isDOMReplaced === true ? true : false));
+        // alert('Storage isParseHTML:' + isParseHTML + " isDSGVO:" + isDSGVO + " isDOMReplaced:" + isDOMReplaced);
+        // var isParseHTML = (document.getElementById('isParseHTML').checked === true ? true : false);
+        // // alert(isParseHTML);
+
+        // document.getElementById('isParseHTML').checked = (getItem('isParseHTML') === true ? true : false);
+        // document.getElementById('bgcolor').value = localStorage.getItem('bgcolor');
+        // document.getElementById('font').value = localStorage.getItem('font');
+        // document.getElementById('image').value = localStorage.getItem('image');
+        // htmlElem.style.backgroundColor = '#' + currentColor;
+        // pElem.style.fontFamily = currentFont;
+
+        // imgElem.setAttribute('src', currentImage);
+        // alert(isParseHTML);
+        // alert("setStorage done");
+
+    } catch (error) {
+        alert(error);
+    }
 }
 //main part

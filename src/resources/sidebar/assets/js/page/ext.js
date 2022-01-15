@@ -186,7 +186,6 @@ function _getISP(url, id) {
         });
         p1.then(
             function(data) {
-                $('#home').append('COUNT:' + JSON.stringify(data));
                 for (var v in data) {
                     result += '<li><a href="https://www.letztechance.org/read-22-' + data[v] + '.html">' + data[v] + '</a></li>';
                 }

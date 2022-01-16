@@ -76,149 +76,15 @@ function Home() {
 
 }
 
-function _get(url, id, isAppend, isFilter, pattern) {
-
-    $.get(url, function(data) {
-        data = isFilter ? $(data).find(pattern) : data; //use .filter() instead.
-        if (isAppend) {
-            $(id).append(data);
-        } else {
-            $(id).html(data);
-        }
-    });
-}
-async function getPageAsync(api) {
-    console.log('get:' + api);
-    return $.ajax({
-            url: api,
-            type: 'get',
-            dataType: 'json',
-            crossDomain: true,
-        })
-        // .then(response => response.data);
-        .then(response => response);
-}
-
-function _getIndex(url, id) {
-    var result = "";
-    console.log(url);
-    try {
-        var p1 = new Promise(function(resolve, reject) {
-            setTimeout(() => resolve(getPageAsync(url)), 300);
-        });
-        p1.then(
-            function(data) {
-                // $('#home').append('COUNT:' + data.list);
-                for (var v in data.list) {
-                    result += "<li><a href=\"https://www.letztechance.org/list-" + data.list[v].id + "-1.html\">" + data.list[v].name + "</a></li>";
-                }
-                $(id).append(result);
-            });
-
-
-
-    } catch (error) {
-        console.error(error);
-        console.error(error.stack);
-    }
-}
-
-function _getGames(url, id) {
-    var result = "";
-    console.log(url);
-    try {
-        var p1 = new Promise(function(resolve, reject) {
-            setTimeout(() => resolve(getPageAsync(url)), 300);
-        });
-        p1.then(
-            function(data) {
-                for (var v in data) {
-                    result += "<li><a href=\"https://www.letztechance.org/games/" + data[v] + "\">" + data[v] + "</a></li>";
-                }
-                $(id).append(result);
-            });
-    } catch (error) {
-        console.error(error);
-        console.error(error.stack);
-    }
-}
-
-function _getTools(url, id) {
-    var result = "";
-    console.log(url);
-    try {
-        var p1 = new Promise(function(resolve, reject) {
-            setTimeout(() => resolve(getPageAsync(url)), 300);
-        });
-        p1.then(
-            function(data) {
-                for (var v in data.row) {
-                    result += '<li><a href="https://www.letztechance.org/read-22-' + data.row[v].id + '.html">' + data.row[v].subject + '</a></li>';
-                }
-                $(id).append(result);
-            });
-    } catch (error) {
-        console.error(error);
-        console.error(error.stack);
-    }
-}
-
-function _getEnv(url, id) {
-    var result = "";
-    console.log(url);
-    try {
-        var p1 = new Promise(function(resolve, reject) {
-            setTimeout(() => resolve(getPageAsync(url)), 300);
-        });
-        p1.then(
-            function(data) {
-                // $("#home").append(JSON.stringify(data));
-                for (var v in data.page.log) {
-                    result += '<li>' + JSON.stringify(data.page.log[v]) + '</a></li>';
-                }
-                $(id).append(result);
-            });
-    } catch (error) {
-        console.error(error);
-        console.error(error.stack);
-    }
-}
-
-function _getISP(url, id) {
-    var result = "";
-    console.log(url);
-    try {
-        var p1 = new Promise(function(resolve, reject) {
-            setTimeout(() => resolve(getPageAsync(url)), 300);
-        });
-        p1.then(
-            function(data) {
-                for (var v in data) {
-                    result += '<li>' + data[v] + '</li>';
-                }
-                $(id).append(result);
-            });
-    } catch (error) {
-        console.error(error);
-        console.error(error.stack);
-    }
-}
 $(function() {
-
     var result = "";
-    var index = 1;
-    var page = 1;
-    var html;
     var oHome;
-    var indexAPI = "https://www.letztechance.org/webservices/client.php?q=getFullIndexJSON&value1=0&l=";
-    var gamesAPI = "https://www.letztechance.org/webservices/client.php?q=getGames";
-    var toolsAPI = "https://www.letztechance.org/webservices/client.php?q=getListJSON&value1=22&l=";
-    var envAPI = "https://www.letztechance.org/webservices/client.php?q=getLog&query=";
-    var ispAPI = "https://www.letztechance.org/webservices/client.php?q=getGeoLocation&value1={}&value2=de";
+    var webAPI;
+
     var optionsHTML = "options.html";
     try {
-        html = new HTML();
         oHome = new Home();
+        webAPI = new WebAPI();
         getPreloader("home", "#out");
 
         var title = "<h3>LetzteChance.Org</h3><h2 style=\"margin-top:0;\">LC2FFExt</h2> \n";
@@ -234,12 +100,15 @@ $(function() {
         // eof tbs
         printOut("#out", result);
         printOut("#cnt", getBoxFluid("(c) by LetzteChance.Org", "", ""));
-        _get(optionsHTML, '#rss', true, false, '');
-        _getIndex(indexAPI, '#foren');
-        _getGames(gamesAPI, '#games');
-        _getTools(toolsAPI, '#tools');
-        _getEnv(envAPI, '#env');
-        _getISP(ispAPI, '#isp');
+        $('#out').append("url:" + webAPI.indexAPI);
+        webAPI._getIndex(webAPI.API.indexAPI, '#foren');
+        webAPI._getGames(webAPI.API.gamesAPI, '#games');
+        webAPI._getTools(webAPI.API.toolsAPI, '#tools');
+        webAPI._getEnv(webAPI.API.envAPI, '#env');
+        webAPI._getISP(webAPI.API.ispAPI, '#isp');
+
+        webAPI._get(optionsHTML, '#options', true, false, '');
+        webAPI._get(optionsHTML, '#rss', true, false, '');
 
 
 
@@ -258,6 +127,6 @@ $(function() {
             });
 
     } catch (e) {
-        new HTML().setErrorPage(e);
+        oHome.oHTML.setErrorPage(e);
     }
 });

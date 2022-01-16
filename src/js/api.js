@@ -47,12 +47,7 @@ function onError(error) {
     console.log(`Error: ${error}`);
 }
 
-/*
-Add notifyExtension() as a listener to click events.
-*/
-// window.addEventListener("click", notifyExtension);
-//browser.runtime.sendMessage({ "text": "TESTETEST" });
-
+//notify
 function getMsgBox(message) {
     console.log("background script received message");
     var title = browser.i18n.getMessage("notificationTitle");
@@ -66,7 +61,6 @@ function getMsgBox(message) {
     });
 }
 // getMsgBox("blasldas");
-
 function showMsg(msg, title) {
     browser.notifications.create({
         "type": "basic",
@@ -75,6 +69,12 @@ function showMsg(msg, title) {
     });
 
 }
+
+function showMSG(msg) {
+    browser.notifications.create(msg);
+
+}
+//eonotify
 /**
  * TODO:Update the UI: set the value of the shortcut textbox.
  */

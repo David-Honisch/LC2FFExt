@@ -1,3 +1,4 @@
+$('#title').append('blah');;
 try {
     var choose = document.getElementById("choose");
     var choices = document.getElementsByClassName("ua-choices");
@@ -28,3 +29,9 @@ try {
     console.error(error.stack);
 }
 console.log("Fuck");
+(function() {
+    //    browser.storage.onChanged.addListener(function(changes, areaName) {
+    localStorage.onChanged.addListener(function(changes, areaName) {
+        console.log("New item in storage", changes.visitedPages.newValue);
+    })
+})();

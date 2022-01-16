@@ -3,9 +3,9 @@
     "manifest_version": 2,
     "name": "__MSG_extensionName__",
     "description": "__MSG_extensionDescription__",
-    "version": "1.33",
-    "versionString": "1.33",
-    "homepage_url": "https://www.letztechance.org/lc2firefoxaddon",
+    "version": "1.41",
+    "versionString": "1.41",
+    "homepage_url": "https://github.com/David-Honisch/LC2FFExt",
     "update-url": "https://www.letztechance.org/lc2firefoxaddon",
     "default_locale": "de",
     "applications": {

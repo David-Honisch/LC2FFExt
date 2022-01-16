@@ -7,6 +7,8 @@ function WebAPI() {
     this.API = {
         indexAPI: "https://www.letztechance.org/webservices/client.php?q=getFullIndexJSON&value1=0&l=",
         gamesAPI: "https://www.letztechance.org/webservices/client.php?q=getGames",
+        listAPI: "https://www.letztechance.org/webservices/client.php?q=getListJSON&value1=%s1&l=",
+        readAPI: "https://www.letztechance.org/webservices/client.php?q=getReadJSON&value1=%s1&value2=%s2&l=",
         toolsAPI: "https://www.letztechance.org/webservices/client.php?q=getListJSON&value1=22&l=",
         envAPI: "https://www.letztechance.org/webservices/client.php?q=getLog&query=",
         ispAPI: "https://www.letztechance.org/webservices/client.php?q=getGeoLocation&value1={}&value2=de"
@@ -14,6 +16,7 @@ function WebAPI() {
 
     this.staticHTML = {
         sidebar: "sidebar.html",
+        home: "home.html",
         rssfeeds: "rssfeeds.html",
         options: "options.html"
     };
@@ -45,7 +48,7 @@ function WebAPI() {
 
     this._getIndex = function _getIndex(url, id) {
         var result = "";
-        $('#out').append('Reading:' + url)
+        // $('#out').append('Reading:' + url)
         try {
             var that = this;
             var p1 = new Promise(function(resolve, reject) {
@@ -53,12 +56,10 @@ function WebAPI() {
             });
             p1.then(
                 function(data) {
-                    $('#out').append(result);
                     for (var v in data.list) {
                         result += "<li><a href=\"https://www.letztechance.org/list-" + data.list[v].id + "-1.html\">" + data.list[v].name + "</a></li>";
                     }
-                    // $(id).append(result);
-                    document.getElementById('foren').innerHTML += result;
+                    $(id).append(result);
                 });
         } catch (error) {
             $('#error').append('Error:' + error)
@@ -135,7 +136,7 @@ function WebAPI() {
         try {
             var that = this;
             var p1 = new Promise(function(resolve, reject) {
-                setTimeout(() => resolve(this.getPageAsync(url)), 300);
+                setTimeout(() => resolve(that.getPageAsync(url)), 300);
             });
             p1.then(
                 function(data) {
@@ -143,6 +144,46 @@ function WebAPI() {
                         result += '<li>' + data[v] + '</li>';
                     }
                     $(id).append(result);
+                });
+        } catch (error) {
+            console.error(error);
+            console.error(error.stack);
+        }
+    }
+    this._getLIST = function _getLIST(url, table, id) {
+        var result = "";
+        console.log(url);
+        try {
+            var that = this;
+            var p1 = new Promise(function(resolve, reject) {
+                setTimeout(() => resolve(that.getPageAsync(url)), 300);
+            });
+            p1.then(
+                function(data) {
+                    // $('#error').append(JSON.stringify(data.row));
+                    for (var v in data.row) {
+                        result += '<li><a href="https://www.letztechance.org/read-' + table + '-' + data.row[v]['id'] + '.html" target="_blank">' + data.row[v]['subject'] + '</a></li>';
+                    }
+                    $(id).append(result);
+                });
+        } catch (error) {
+            console.error(error);
+            console.error(error.stack);
+        }
+    }
+    this._getREAD = function _getREAD(url, table, id) {
+        var result = "";
+        console.log(url);
+        try {
+            var that = this;
+            var p1 = new Promise(function(resolve, reject) {
+                setTimeout(() => resolve(that.getPageAsync(url)), 300);
+            });
+            p1.then(
+                function(data) {
+                    // $('#error').append(JSON.stringify(data.row));
+                    $(id).append(data.subject);
+                    $(id).append(data.body);
                 });
         } catch (error) {
             console.error(error);

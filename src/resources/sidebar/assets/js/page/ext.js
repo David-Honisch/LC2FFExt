@@ -43,7 +43,7 @@ function Home() {
     this.getTabHead = function getTabHead(tabs) {
         var tabHeader = "<li role=\"presentation\" class=\"active\"><a href=\"#home\" id=\"home-tab\" role=\"tab\" data-toggle=\"tab\" aria-controls=\"home\" aria-expanded=\"true\">" +
             msg(tabs[0]) + "</a></li>";
-        tabHeader += "<li role=\"presentation\" class=\"\"><a href=\"#options\" role=\"tab\" id=\"profile-tab\" data-toggle=\"tab\" aria-controls=\"options\" aria-expanded=\"false\">" +
+        tabHeader += "<li role=\"presentation\" class=\"\"><a href=\"#options\" role=\"tab\" id=\"rss-tab\" data-toggle=\"tab\" aria-controls=\"options\" aria-expanded=\"false\">" +
             msg("options") + "</a></li>";
         tabHeader += "<li role=\"presentation\" class=\"\"><a href=\"#rss\" id=\"rss-tab\" role=\"tab\" data-toggle=\"tab\" aria-controls=\"home\" aria-expanded=\"true\">" +
             msg(tabs[1]) + "</a></li>";
@@ -56,24 +56,20 @@ function Home() {
         var tabContent = "";
         tabContent += "<div id=\"myTabContent\" class=\"tab-content\"> ";
         tabContent += "<div role=\"tabpanel\" class=\"tab-pane fade active in\" id=\"home\" aria-labelledby=\"home-tab\">";
-        tabContent += this.oHTML.getHomeExtensionMenu();
+        // tabContent += this.oHTML.getHomeExtensionMenu();
         tabContent += "</div>";
 
         tabContent += "<div role=\"tabpanel\" class=\"tab-pane fade\" id=\"options\" aria-labelledby=\"options-tab\">";
         tabContent += "Loading...";
         tabContent += "</div>";
+
+        tabContent += "<div role=\"tabpanel\" class=\"tab-pane fade\" id=\"rss\" aria-labelledby=\"rss-tab\">";
+        // tabContent += this.oHTML.getRSSExtensionMenu();
         tabContent += "</div>";
 
-        tabContent += "<div role=\"tabpanel\" class=\"tab-pane fade\" id=\"rss\" aria-labelledby=\"profile-tab\">";
-        tabContent += this.oHTML.getRSSExtensionMenu();
-        tabContent += "</div>";
         tabContent += "</div>";
         return tabContent;
     }
-
-
-
-
 }
 
 $(function() {
@@ -100,8 +96,9 @@ $(function() {
         printOut("#out", result);
         printOut("#cnt", getBoxFluid("(c) by LetzteChance.Org", "", ""));
         // $('#out').append("url:" + webAPI.indexAPI);
-        // webAPI._get(webAPI.staticHTML.options, '#options', true, false, '');
-        // webAPI._get(webAPI.staticHTML.rssfeeds, '#rss', true, false, '');
+        webAPI._get(webAPI.staticHTML.home, '#home', true, false, '');
+        webAPI._get(webAPI.staticHTML.options, '#options', true, false, '');
+        webAPI._get(webAPI.staticHTML.rssfeeds, '#rss', true, false, '');
 
 
         webAPI._getIndex(webAPI.API.indexAPI, '#foren');
@@ -109,6 +106,10 @@ $(function() {
         webAPI._getTools(webAPI.API.toolsAPI, '#tools');
         webAPI._getEnv(webAPI.API.envAPI, '#env');
         webAPI._getISP(webAPI.API.ispAPI, '#isp');
+
+        webAPI._getLIST(webAPI.API.listAPI.replace('%s1', '1'), 1, '#news');
+        webAPI._getLIST(webAPI.API.listAPI.replace('%s1', '2'), 2, '#securitynews');
+        webAPI._getREAD(webAPI.API.readAPI.replace('%s1', '28').replace('%s2', '224'), 28, '#rssfeeds');
 
 
 
@@ -122,7 +123,7 @@ $(function() {
                 if (e.which == 13) {
                     var url = new API().hostName + "index.html?q=search&query=" +
                         $("#btnquery").val() + "";
-                    alert(url);
+                    // alert(url);
                     window.open(url, '_blank');
                 }
             });

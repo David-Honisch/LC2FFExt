@@ -21,8 +21,17 @@ https://letztechance.org
 ##Content Script -> Reading document and add something
 https://github.com/David-Honisch/LC2FFExt/blob/main/src/js/content-script.js
 
-##Download v.1.2
-https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/src/web-ext-artifacts/lc2ffext-1.2.zip
+##Download v.1.40
+https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/src/web-ext-artifacts/lc2ffext-1.40.zip
+
+##Download v.1.41
+https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/src/web-ext-artifacts/lc2ffext-1.41.zip
+
+##Download v.1.43
+https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/src/web-ext-artifacts/lc2ffext-1.42.zip
+
+##First automatic update implemented (v.1.43<)
+https://github.com/David-Honisch/LC2FFExt/blob/main/lc2ffextupdates.json
 
 ## License
 no licence

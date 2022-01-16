@@ -17,6 +17,7 @@ function WebAPI() {
     this.staticHTML = {
         sidebar: "sidebar.html",
         home: "home.html",
+        news: "news.html",
         rssfeeds: "rssfeeds.html",
         options: "options.html"
     };

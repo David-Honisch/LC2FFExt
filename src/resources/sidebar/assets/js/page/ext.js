@@ -26,7 +26,8 @@ var user;
 var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
 var pathArray = window.location.pathname.split('/');
 var secondLevelLocation = pathArray[0];
-var tabs = ["home", "rss feeds", "info", "export"];
+var tabs = ["home", "edit", "replace", "news", "rssfeeds", "options"];
+var dropdowns = ["info", "export"];
 // var dropdown1 = ["Chat", "IRC", "ICQ", "Jabber", "Skype", "Whatsapp"];
 // var dropdown2 = ["EXCEL", "PDF", "WORD", "ZIP"];
 
@@ -40,33 +41,30 @@ function Home() {
     this.oCharts = new Charts();
 
 
-    this.getTabHead = function getTabHead(tabs) {
-        var tabHeader = "<li role=\"presentation\" class=\"active\"><a href=\"#home\" id=\"home-tab\" role=\"tab\" data-toggle=\"tab\" aria-controls=\"home\" aria-expanded=\"true\">" +
-            msg(tabs[0]) + "</a></li>";
-        tabHeader += "<li role=\"presentation\" class=\"\"><a href=\"#options\" role=\"tab\" id=\"rss-tab\" data-toggle=\"tab\" aria-controls=\"options\" aria-expanded=\"false\">" +
-            msg("options") + "</a></li>";
-        tabHeader += "<li role=\"presentation\" class=\"\"><a href=\"#rss\" id=\"rss-tab\" role=\"tab\" data-toggle=\"tab\" aria-controls=\"home\" aria-expanded=\"true\">" +
-            msg(tabs[1]) + "</a></li>";
-
-        tabHeader += this.oHTML.createDropDown("info", dropdown1);
-        tabHeader += this.oHTML.createDropDown("export", dropdown2);
-        return tabHeader;
+    this.getTabHead = function getTabHead(tabs, dropdown1, dropdown2) {
+        var result = "";
+        var i = 0;
+        for (var v in tabs) {
+            var ActiveTab = i == 0 ? ' class=\"active\"' : '';
+            result += "<li role=\"presentation\"" + ActiveTab + "><a href=\"#" + tabs[v] + "\" id=\"" + tabs[v] + "-tab\" role=\"tab\" data-toggle=\"tab\" aria-controls=\"home\" aria-expanded=\"true\">" +
+                msg(tabs[v]) + "</a></li>";
+            i++;
+        }
+        result += this.oHTML.createDropDown("info", dropdown1);
+        result += this.oHTML.createDropDown("export", dropdown2);
+        return result;
     }
-    this.getTabBody = function getTabBody() {
+    this.getTabBody = function getTabBody(tabs) {
         var tabContent = "";
+        var i = 0;
         tabContent += "<div id=\"myTabContent\" class=\"tab-content\"> ";
-        tabContent += "<div role=\"tabpanel\" class=\"tab-pane fade active in\" id=\"home\" aria-labelledby=\"home-tab\">";
-        // tabContent += this.oHTML.getHomeExtensionMenu();
-        tabContent += "</div>";
-
-        tabContent += "<div role=\"tabpanel\" class=\"tab-pane fade\" id=\"options\" aria-labelledby=\"options-tab\">";
-        tabContent += "Loading...";
-        tabContent += "</div>";
-
-        tabContent += "<div role=\"tabpanel\" class=\"tab-pane fade\" id=\"rss\" aria-labelledby=\"rss-tab\">";
-        // tabContent += this.oHTML.getRSSExtensionMenu();
-        tabContent += "</div>";
-
+        for (var v in tabs) {
+            var ActiveTab = i == 0 ? 'tab-pane fade active in' : 'tab-pane fade in';
+            tabContent += "<div role=\"tabpanel\" class=\"" + ActiveTab + "\" id=\"" + tabs[v] + "\" aria-labelledby=\"" + tabs[v] + "-tab\">";
+            // tabContent += "<p>Loading...</p>";
+            tabContent += "</div>";
+            i++;
+        }
         tabContent += "</div>";
         return tabContent;
     }
@@ -89,14 +87,16 @@ $(function() {
 
         result += getBoxFluid(title);
         // tabs
-        var tabHeader = oHome.getTabHead(tabs);
-        var tabContent = oHome.getTabBody();
+        var tabHeader = oHome.getTabHead(tabs, dropdown1, dropdown2);
+        var tabContent = oHome.getTabBody(tabs);
         result += getBoxFluid(getTabs("sTab", tabHeader, tabContent));
         // eof tbs
         printOut("#out", result);
         printOut("#cnt", getBoxFluid("(c) by LetzteChance.Org", "", ""));
         // $('#out').append("url:" + webAPI.indexAPI);
         webAPI._get(webAPI.staticHTML.home, '#home', true, false, '');
+
+        webAPI._get(webAPI.staticHTML.news, '#news', true, false, '');
         webAPI._get(webAPI.staticHTML.options, '#options', true, false, '');
         webAPI._get(webAPI.staticHTML.rssfeeds, '#rss', true, false, '');
 
@@ -107,9 +107,13 @@ $(function() {
         webAPI._getEnv(webAPI.API.envAPI, '#env');
         webAPI._getISP(webAPI.API.ispAPI, '#isp');
 
-        webAPI._getLIST(webAPI.API.listAPI.replace('%s1', '1'), 1, '#news');
+        webAPI._getLIST(webAPI.API.listAPI.replace('%s1', '22'), 22, '#exttools');
+
+        webAPI._getLIST(webAPI.API.listAPI.replace('%s1', '1'), 1, '#newslist');
         webAPI._getLIST(webAPI.API.listAPI.replace('%s1', '2'), 2, '#securitynews');
+
         webAPI._getREAD(webAPI.API.readAPI.replace('%s1', '28').replace('%s2', '224'), 28, '#rssfeeds');
+        //optionslist
 
 
 
@@ -132,3 +136,4 @@ $(function() {
         oHome.oHTML.setErrorPage(e);
     }
 });
+//

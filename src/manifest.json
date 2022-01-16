@@ -24,15 +24,15 @@
         "uriTemplate": "https://www.letztechance.org/openlink?https://mibbit.com/?url=%s"
     }],
     "background": {
-        "scripts": ["js/api.js", "js/menu.js", "js/background.js", "js/bookmark.js", "js/command.js", "js/export.js", "js/filter.js", "js/notify.js", "js/message.js", "js/permissions.js", "js/rootcert.js", "js/useragent.js"]
+        "scripts": ["assets/js/api.js", "assets/js/menu.js", "assets/js/background.js", "assets/js/bookmark.js", "assets/js/command.js", "assets/js/export.js", "assets/js/filter.js", "assets/js/notify.js", "assets/js/message.js", "assets/js/permissions.js", "assets/js/rootcert.js", "assets/js/useragent.js"]
     },
     "content_scripts": [{
             "matches": ["<all_urls>"],
-            "js": ["js/export.js"]
+            "js": ["assets/js/export.js"]
         },
         {
             "matches": ["<all_urls>"],
-            "js": ["js/content-script.js"]
+            "js": ["assets/js/content-script.js"]
         }
     ],
 
@@ -46,8 +46,6 @@
         "activeTab",
         "webRequest", "webRequestBlocking", "https://www.letztechance.org/*"
     ],
-
-
 
     "commands": {
         "toggle-feature": {
@@ -75,7 +73,7 @@
     },
     "browser_specific_settings": {
         "gecko": {
-            "update_url": "https://www.letztechance.org/download/lc2ffextupdates.json"
+            "update_url": "https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/lc2ffextupdates.json"
         }
     }
 

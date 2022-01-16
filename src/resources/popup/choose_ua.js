@@ -29,9 +29,9 @@ try {
     console.error(error.stack);
 }
 console.log("Fuck");
-(function() {
-    //    browser.storage.onChanged.addListener(function(changes, areaName) {
-    localStorage.onChanged.addListener(function(changes, areaName) {
-        console.log("New item in storage", changes.visitedPages.newValue);
-    })
-})();
+// (function() {
+//     //    browser.storage.onChanged.addListener(function(changes, areaName) {
+//     localStorage.onChanged.addListener(function(changes, areaName) {
+//         console.log("New item in storage", changes.visitedPages.newValue);
+//     })
+// })();

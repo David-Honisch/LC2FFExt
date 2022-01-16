@@ -1,17 +1,21 @@
 'use strict'
-console.log('WebAPI loaded...');
-$('#error').append('WebAPI loaded....')
+// console.log('WebAPI loaded...');
+// $('#error').append('WebAPI loaded....')
 
 function WebAPI() {
-    $('#error').append('WebAPI running....')
-
-
+    // $('#error').append('WebAPI running....')
     this.API = {
         indexAPI: "https://www.letztechance.org/webservices/client.php?q=getFullIndexJSON&value1=0&l=",
         gamesAPI: "https://www.letztechance.org/webservices/client.php?q=getGames",
         toolsAPI: "https://www.letztechance.org/webservices/client.php?q=getListJSON&value1=22&l=",
         envAPI: "https://www.letztechance.org/webservices/client.php?q=getLog&query=",
         ispAPI: "https://www.letztechance.org/webservices/client.php?q=getGeoLocation&value1={}&value2=de"
+    };
+
+    this.staticHTML = {
+        sidebar: "sidebar.html",
+        rssfeeds: "rssfeeds.html",
+        options: "options.html"
     };
 
 
@@ -41,21 +45,23 @@ function WebAPI() {
 
     this._getIndex = function _getIndex(url, id) {
         var result = "";
-        console.log(url);
-        // $('#error').append('Reading:' + url)
+        $('#out').append('Reading:' + url)
         try {
+            var that = this;
             var p1 = new Promise(function(resolve, reject) {
-                setTimeout(() => resolve(getPageAsync(url)), 300);
+                setTimeout(() => resolve(that.getPageAsync(url)), 300);
             });
             p1.then(
                 function(data) {
-                    // $('#home').append('COUNT:' + data.list);
+                    $('#out').append(result);
                     for (var v in data.list) {
                         result += "<li><a href=\"https://www.letztechance.org/list-" + data.list[v].id + "-1.html\">" + data.list[v].name + "</a></li>";
                     }
-                    $(id).append(result);
+                    // $(id).append(result);
+                    document.getElementById('foren').innerHTML += result;
                 });
         } catch (error) {
+            $('#error').append('Error:' + error)
             console.error(error);
             console.error(error.stack);
         }
@@ -63,10 +69,10 @@ function WebAPI() {
 
     this._getGames = function _getGames(url, id) {
         var result = "";
-        console.log(url);
         try {
+            var that = this;
             var p1 = new Promise(function(resolve, reject) {
-                setTimeout(() => resolve(getPageAsync(url)), 300);
+                setTimeout(() => resolve(that.getPageAsync(url)), 300);
             });
             p1.then(
                 function(data) {
@@ -83,10 +89,10 @@ function WebAPI() {
 
     this._getTools = function _getTools(url, id) {
         var result = "";
-        console.log(url);
         try {
+            var that = this;
             var p1 = new Promise(function(resolve, reject) {
-                setTimeout(() => resolve(getPageAsync(url)), 300);
+                setTimeout(() => resolve(that.getPageAsync(url)), 300);
             });
             p1.then(
                 function(data) {
@@ -105,8 +111,9 @@ function WebAPI() {
         var result = "";
         console.log(url);
         try {
+            var that = this;
             var p1 = new Promise(function(resolve, reject) {
-                setTimeout(() => resolve(getPageAsync(url)), 300);
+                setTimeout(() => resolve(that.getPageAsync(url)), 300);
             });
             p1.then(
                 function(data) {
@@ -126,8 +133,9 @@ function WebAPI() {
         var result = "";
         console.log(url);
         try {
+            var that = this;
             var p1 = new Promise(function(resolve, reject) {
-                setTimeout(() => resolve(getPageAsync(url)), 300);
+                setTimeout(() => resolve(this.getPageAsync(url)), 300);
             });
             p1.then(
                 function(data) {

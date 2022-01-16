@@ -81,7 +81,6 @@ $(function() {
     var oHome;
     var webAPI;
 
-    var optionsHTML = "options.html";
     try {
         oHome = new Home();
         webAPI = new WebAPI();
@@ -100,15 +99,17 @@ $(function() {
         // eof tbs
         printOut("#out", result);
         printOut("#cnt", getBoxFluid("(c) by LetzteChance.Org", "", ""));
-        $('#out').append("url:" + webAPI.indexAPI);
+        // $('#out').append("url:" + webAPI.indexAPI);
+        // webAPI._get(webAPI.staticHTML.options, '#options', true, false, '');
+        // webAPI._get(webAPI.staticHTML.rssfeeds, '#rss', true, false, '');
+
+
         webAPI._getIndex(webAPI.API.indexAPI, '#foren');
         webAPI._getGames(webAPI.API.gamesAPI, '#games');
         webAPI._getTools(webAPI.API.toolsAPI, '#tools');
         webAPI._getEnv(webAPI.API.envAPI, '#env');
         webAPI._getISP(webAPI.API.ispAPI, '#isp');
 
-        webAPI._get(optionsHTML, '#options', true, false, '');
-        webAPI._get(optionsHTML, '#rss', true, false, '');
 
 
 

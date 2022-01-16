@@ -72,6 +72,11 @@
         "default_icon": "icons/lc-16.png",
         "default_title": "Choose a user agent",
         "default_popup": "resources/popup/choose.html"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "update_url": "https://www.letztechance.org/download/lc2ffextupdates.json"
+        }
     }
 
 }

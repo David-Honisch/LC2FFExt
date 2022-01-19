@@ -9,6 +9,23 @@ const options = [{
         value: '#IsDSGVO'
     }
 ];
+var extoptions = [{
+        commandName: 'isDSGVO',
+        value: '#isDSGVO',
+        isactive: false
+    },
+    {
+        commandName: 'isParseHTML',
+        value: '#isParseHTML',
+        isactive: false
+    },
+    {
+        commandName: 'isDOMReplaced',
+        value: '#isDOMReplaced',
+        isactive: false
+    }
+];
+
 var out = document.getElementById('localstorage');
 var btnOptionSubmit = document.getElementById('btnOptionSubmit');
 
@@ -22,16 +39,26 @@ var htmlElem = document.querySelector('html');
 function printOptions(out) {
     try {
 
-
         out.innerHTML = "</br>product:" + (getItem('product'));
         out.innerHTML += "</br>title:" + (getItem('title'));
+
         out.innerHTML += "</br>isDSGVO:" + (getItem('isDSGVO'));
-        out.innerHTML += "</br>isParseHTML:" + (getItem('isParseHTML'));
         out.innerHTML += "</br>isDOMReplaced:" + (getItem('isDOMReplaced'));
+        out.innerHTML += "</br>isParseHTML:" + (getItem('isParseHTML'));
         out.innerHTML += "</br>replaceText:" + (getItem('replaceText'));
 
-        // out.innerHTML += "</br>cookie:" + getCookie();
-        // out.innerHTML += "</br>cookie:" + JSON.stringify(getCookie());
+        out.innerHTML += "</br>cookie:" + getCookie();
+        out.innerHTML += "</br>cookie:" + JSON.stringify(getCookie());
+
+        var store = getItem('store')
+        out.innerHTML += "</br>store" + (JSON.stringify(store));
+
+        // for (var v in extoptions) {
+        //     var key = getItem(extoptions[v]["commandName"]);
+        //     var kv = getItem(extoptions[v].isactive);
+        //     out.innerHTML += "</br>" + key + ":" + kv + ".";
+        // }
+        // alert('TEST');
     } catch (error) {
         alert(e);
         alert(e.stack);
@@ -48,9 +75,17 @@ try {
 
     $('#replaceText').html(product + eaten);
 
-    if (!getItem('title') || !getItem('isDSGVO') || !getItem('isParseHTML') || !getItem('isDOMReplaced')) {
+    // var store = getFromStorage();
+    // alert(JSON.stringify(store));
+    $('#debug').html("");
+    //if (!getItem('isDSGVO') || !getItem('isParseHTML') || !getItem('isDOMReplaced')) {
+    var isDSGVO = getItem('isDSGVO') == true || getItem('isDSGVO') == 'true' ? true : false;
+    // alert('OPT:' + isDSGVO);
+    if (isDSGVO == true) {
+        $('#debug').append("populateStorage");
         populateStorage();
     } else {
+        $('#debug').append("setstorage");
         setStorage();
     }
 
@@ -70,7 +105,7 @@ try {
     document.querySelector('#reset').addEventListener('click', resetShortcut);
     setCookie(browser.i18n.getMessage("product"));
 
-    btnOptionSubmit.addEventListener('click', setStorage);
+    btnOptionSubmit.addEventListener('click', populateStorage);
 
     printOptions(out);
 } catch (e) {

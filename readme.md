@@ -21,8 +21,8 @@ https://letztechance.org
 ##Content Script -> Reading document and add something
 https://github.com/David-Honisch/LC2FFExt/blob/main/src/js/content-script.js
 
-##Download v.1.41
-https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/letztechanceorg_menu-1.41-fx.xpi
+##Download v.1.43
+https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/letztechanceorg_menu-1.43-fx.xpi
 
 
 ##First automatic update implemented (v.1.43<)

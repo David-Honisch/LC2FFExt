@@ -1,0 +1,21 @@
+#editcnt {
+    min-height: 20px;
+    height: 90%;
+    margin: 2em 2em 0 2em;
+    border: .2em solid #000000;
+    border-radius: 5px;
+    transition: background-color .2s ease-out;
+}
+
+#editcnt[contenteditable=true] {
+    background-color: white;
+    transition: background-color .2s ease-in;
+}
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}
+
+p {
+    margin: 1em 2em;
+}

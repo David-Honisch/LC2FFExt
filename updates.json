@@ -24,6 +24,20 @@
                     "applications": {
                         "gecko": { "strict_min_version": "40" }
                     }
+                },
+                {
+                    "version": "1.43",
+                    "update_link": "https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/letztechanceorg_menu-1.43-fx.xpi",
+                    "applications": {
+                        "gecko": { "strict_min_version": "40" }
+                    }
+                },
+                {
+                    "version": "1.44",
+                    "update_link": "https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/letztechanceorg_menu-1.44-fx.xpi",
+                    "applications": {
+                        "gecko": { "strict_min_version": "40" }
+                    }
                 }
             ]
         }

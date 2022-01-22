@@ -30,11 +30,12 @@ npm run ktest
 ##Content Script -> Reading document and add something
 https://github.com/David-Honisch/LC2FFExt/blob/main/src/js/content-script.js
 
-##Download v.1.44
+## Download v.1.44
 https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/letztechanceorg_menu-1.44-fx.xpi
+
 http://openlink.letztechance.org/?https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/letztechanceorg_menu-1.44-fx.xpi
 
-##Download v.1.43
+## Download v.1.43
 https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/letztechanceorg_menu-1.43-fx.xpi
 
 

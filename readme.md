@@ -26,7 +26,12 @@ https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/letztechanceorg_me
 
 
 ##First automatic update implemented (v.1.43<)
-https://github.com/David-Honisch/LC2FFExt/blob/main/lc2ffextupdates.json
+https://github.com/David-Honisch/LC2FFExt/blob/main/updates.json
+##update file (raw view)
+https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/updates.json
+
+##developer ext
+https://addons.mozilla.org/de/developers/addon/420c631984d24432851c/versions/submit/
 
 ## License
 no licence

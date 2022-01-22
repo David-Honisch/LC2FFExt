@@ -4,6 +4,8 @@ try {
     var choices = document.getElementsByClassName("ua-choices");
     // var isParseHTML = document.getElementsByClassName("isParseHTML");
     // choose.innerHTML += "<h1>Loading...</h1>";
+    setStorage();
+
     document.addEventListener("click", (e) => {
         console.log("href=" + e.target.href);
         // choose.innerHTML += "href=" + e.target.href;

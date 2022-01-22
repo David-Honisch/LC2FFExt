@@ -70,30 +70,17 @@ try {
     out.innerHTML = "";
     var product = browser.i18n.getMessage("product");
     var eaten = browser.i18n.getMessage("eaten");
-    $('#hptitle').html(product);
-    $('#title').html(product);
+    $('#hptitle').val(product);
+    $('#title').val(product);
 
+    $('#domreplaceText').html(eaten);
     $('#replaceText').html(product + eaten);
 
     // var store = getFromStorage();
     // alert(JSON.stringify(store));
-    $('#debug').html("");
-    //if (!getItem('isDSGVO') || !getItem('isParseHTML') || !getItem('isDOMReplaced')) {
-    var isDSGVO = getItem('isDSGVO') == true || getItem('isDSGVO') == 'true' ? true : false;
-    // alert('OPT:' + isDSGVO);
-    if (isDSGVO == true) {
-        $('#debug').append("populateStorage");
-        populateStorage();
-    } else {
-        $('#debug').append("setstorage");
-        setStorage();
-    }
+    // $('#debug').html("");
 
-    // isParseHTML.onchange = populateStorage;
-
-    // bgcolorForm.onchange = populateStorage;
-    // fontForm.onchange = populateStorage;
-    // imageForm.onchange = populateStorage;
+    setStorage();
     /**
      * Update the UI when the page loads.
      */

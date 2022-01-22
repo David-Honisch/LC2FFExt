@@ -9,7 +9,23 @@
 </head>
 
 <body>
-    <h1 id="title">LC2FFExt</h1>
+    <h1 id="hptitle">LC2FFExt</h1>
+    <fieldset>
+        <label>Title:</label>
+        <input type="text" id="title" disabled><br>
+        <label>DSGVO:</label>
+        <input type="checkbox" id="isDSGVO" disabled>
+    </fieldset>
+    <fieldset>
+        <label>Dom Replacement:</label>
+        <input type="checkbox" id="isDOMReplaced" disabled>
+        <textarea id="domreplaceText" cols="60" rows="1" disabled></textarea>
+    </fieldset>
+    <fieldset>
+        <label>Parse HTML:</label>
+        <input type="checkbox" id="isParseHTML" disabled><br>
+        <textarea id="replaceText" cols="60" rows="2" disabled></textarea>
+    </fieldset>
     <fieldset>
         <label>Options</label>
         <div id="choose">
@@ -17,11 +33,13 @@
                 <option value="all">all</option>            
             </select>
             <br>
-            <label id="isParseHTMLlabel">DSGVO (on/off)</label>
-            <input type="checkbox" id="isDSGVO" name="isDSGVO" checked />
+
+
+            <!-- <label id="isParseHTMLlabel">DSGVO (on/off)</label>
+            <input type="checkbox" id="isDSGVO" name="isDSGVO" disabled checked />
 
             <label id="isParseHTMLlabel">isParseHTML</label>
-            <input type="checkbox" id="isParseHTML" name="isParseHTML" checked />
+            <input type="checkbox" id="isParseHTML" name="isParseHTML" disabled checked /> -->
 
             <br><label id="searchpatternlabel">search pattern</label>
             <input type="text" id="pattern" name="pattern" />
@@ -52,6 +70,8 @@
             <div class="ua-choice">IE 8</div>
         </div>
     </fieldset>
+    <script src="../../resources/sidebar/assets/js/lib/jquery-2.1.3.min.js"></script>
+    <script src="../../assets/js/api.js"></script>
     <script src="choose.js"></script>
 </body>
 

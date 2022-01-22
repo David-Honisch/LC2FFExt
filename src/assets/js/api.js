@@ -168,55 +168,43 @@ function getFromStorage() {
 
 function populateStorage() {
     console.log("populateStorage");
-    // alert("populateStorage");
-    var title = document.getElementById('title').innerHTML;
-    saveLocal('title', title);
-    saveLocal('product', title);
-    //var isDSGVO = (document.getElementById('isDSGVO').checked === true ? true : false);
-    var isDSGVO = document.getElementById('isDSGVO').checked;
-    $('#debug').append('<hr>Populate:' + isDSGVO);
-    var isParseHTML = (document.getElementById('isParseHTML').checked === true ? true : false);
-    var isDOMReplaced = (document.getElementById('isDOMReplaced').checked === true ? true : false);
+    // $('#debug').html("");
+    var title = $('#title').val();
+    var isDSGVO = ($('#isDSGVO').prop('checked') === true ? true : false); //(getItem('isDSGVO') === true ? true : false);
+    var isParseHTML = ($('#isParseHTML').prop('checked') === true ? true : false);
+    var isDOMReplaced = ($('#isDOMReplaced').prop('checked') === true ? true : false);
     var replaceText = $('#replaceText').val();
+    // $('#debug').append('<br>Populate:isDSGVO:' + isDSGVO + '<br>isDOMReplaced:' + isDOMReplaced + '<br>isParseHTML:' + isParseHTML);
+    //checkboxes
     saveLocal('isDSGVO', isDSGVO);
     saveLocal('isParseHTML', isParseHTML);
     saveLocal('isDOMReplaced', isDOMReplaced);
+    //values
+    saveLocal('domreplaceText', replaceText);
     saveLocal('replaceText', replaceText);
     saveLocal('store', JSON.stringify(getFromFormStorage()));
-    // alert("isDSGVO:" + isDSGVO + "isParseHTML:" + isParseHTML + " isDOMReplaced:" + isDOMReplaced);
-    // localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-    // localStorage.setItem('font', document.getElementById('font').value);
-    // localStorage.setItem('image', document.getElementById('image').value);
+    saveLocal('title', title);
+    saveLocal('product', product);
     setStorage();
-    // alert("populateStorage done");
 }
 
 function setStorage() {
     console.log("setStorage");
     try {
-        var isDSGVO = $('#isDSGVO').prop('checked'); //(getItem('isDSGVO') === true ? true : false);
-        var isParseHTML = getItem('isParseHTML');
-        var isDOMReplaced = getItem('isDOMReplaced');
+        var title = getItem('title');
+        var isDSGVO = getItem('isDSGVO') == 'true' ? true : false; //(getItem('isDSGVO') === true ? true : false);
+        var isParseHTML = getItem('isParseHTML') == 'true' ? true : false;
+        var isDOMReplaced = getItem('isDOMReplaced') == 'true' ? true : false;
         var replaceText = getItem('replaceText');
+        // $('#debug').append('<br>Storage:' + isDSGVO + '<br>isDOMReplaced:' + isDOMReplaced + '<br>isParseHTML:' + isParseHTML);
+        //checkboxes
+        $('#isDSGVO').prop('checked', isDSGVO);
+        $('#isParseHTML').prop('checked', isParseHTML);
+        $('#isDOMReplaced').prop('checked', isDOMReplaced);
+        //values
+        $('#title').val(title);
         $('#replaceText').val(replaceText);
-        var store = getFromFormStorage();
-        // saveLocal('store', JSON.stringify(store));
-        $('#debug').append('<hr>Storage:' + isDSGVO);
-        if (isDSGVO === true) {
-            $('#isDSGVO').prop('checked', true);
-        } else {
-            $('#isDSGVO').prop('checked', false);
-        }
-        if (isParseHTML == true) {
-            $('#isParseHTML').prop('checked', true);
-        } else {
-            $('#isParseHTML').prop('checked', false);
-        }
-        if (isDOMReplaced == true) {
-            $('#isDOMReplaced').prop('checked', true);
-        } else {
-            $('#isDOMReplaced').prop('checked', false);
-        }
+        $('#domreplaceText').html(replaceText);
         printOptions(document.getElementById('localstorage'));
 
 

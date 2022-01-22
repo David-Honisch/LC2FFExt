@@ -54,152 +54,70 @@ no licence
 (c)by webmaster@letztechance.org
 --------------------------
 http://www.letztechance.org
-Haftung f�r Inhalte 
 
-Die Inhalte unserer Seiten wurden mit gr��ter Sorgfalt erstellt. F�r die Richtigkeit, Vollst�ndigkeit und 
-Aktualit�t der Inhalte k�nnen wir jedoch keine Gew�hr �bernehmen. Als Diensteanbieter sind wir gem�� 
-� 7 Abs.1 TMG f�r eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. 
-Nach �� 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, �bermittelte oder gespeicherte 
-fremde Informationen zu �berwachen oder nach Umst�nden zu forschen, die auf eine rechtswidrige 
-T�tigkeit hinweisen. 
-Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen 
-Gesetzen bleiben hiervon unber�hrt. Eine diesbez�gliche Haftung ist jedoch erst ab dem Zeitpunkt 
-der Kenntnis einer konkreten Rechtsverletzung m�glich. Bei Bekanntwerden von entsprechenden 
-Rechtsverletzungen werden wir diese Inhalte umgehend entfernen. 
+Impressum
+Haftung für Inhalte
 
-Haftung f�r Links 
+Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
 
-Unser Angebot enth�lt Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. 
-Deshalb k�nnen wir f�r diese fremden Inhalte auch keine Gew�hr �bernehmen. F�r die Inhalte der 
-verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. 
-Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf m�gliche Rechtsverst��e �berpr�ft. 
-Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. 
-Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer 
-Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links 
-umgehend entfernen. 
+Haftung für Links
 
-Urheberrecht 
+Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
 
-Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem 
-deutschen Urheberrecht. 
-Die Vervielf�ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au�erhalb der Grenzen 
-des Urheberrechtes bed�rfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. 
-Downloads und Kopien dieser Seite sind nur f�r den privaten, nicht kommerziellen Gebrauch gestattet. 
-Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter 
-beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine 
-Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. 
-Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen. 
+Urheberrecht
 
-Datenschutz 
+Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
 
-Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten m�glich. 
-Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) 
-erhoben werden, erfolgt dies, soweit m�glich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre 
-ausdr�ckliche Zustimmung nicht an Dritte weitergegeben. 
+Datenschutz
 
-Wir weisen darauf hin, dass die Daten�bertragung im Internet (z.B. bei der Kommunikation per E-Mail) 
-Sicherheitsl�cken aufweisen kann. Ein l�ckenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht m�glich. 
+Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.
 
-Der Nutzung von im Rahmen der Impressumspflicht ver�ffentlichten Kontaktdaten durch Dritte zur �bersendung von 
-nicht ausdr�cklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdr�cklich widersprochen. 
-Die Betreiber der Seiten behalten sich ausdr�cklich rechtliche Schritte im Falle der unverlangten Zusendung 
-von Werbeinformationen, etwa durch Spam-Mails, vor. 
+Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
 
-Datenschutzerkl�rung f�r die Nutzung von Facebook-Plugins (Like-Button) 
+Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.
 
-Auf unseren Seiten sind Plugins des sozialen Netzwerks 
-Facebook, 1601 South California Avenue, Palo Alto, CA 94304, USA integriert. 
-Die Facebook-Plugins erkennen Sie an dem Facebook-Logo oder dem "Like-Button" ("Gef�llt mir") auf unserer Seite. 
-Eine �bersicht �ber die Facebook-Plugins finden Sie hier: http://developers.facebook.com/docs/plugins/. 
-Wenn Sie unsere Seiten besuchen, wird �ber das Plugin eine direkte Verbindung zwischen Ihrem Browser und 
-dem Facebook-Server hergestellt. Facebook erh�lt dadurch die Information, dass Sie mit Ihrer IP-Adresse unsere Seite 
-besucht haben. Wenn Sie den Facebook "Like-Button" anklicken w�hrend Sie in Ihrem Facebook-Account eingeloggt sind, 
-k�nnen Sie die Inhalte unserer Seiten auf Ihrem Facebook-Profil verlinken. 
-Dadurch kann Facebook den Besuch unserer Seiten Ihrem Benutzerkonto zuordnen. Wir weisen darauf hin, dass wir 
-als Anbieter der Seiten keine Kenntnis vom Inhalt der �bermittelten Daten sowie deren Nutzung durch Facebook erhalten. 
-Weitere Informationen hierzu finden Sie in der Datenschutzerkl�rung von facebook unter http://de-de.facebook.com/policy.php 
+Datenschutzerklärung für die Nutzung von Facebook-Plugins (Like-Button)
 
-Wenn Sie nicht w�nschen, dass Facebook den Besuch unserer Seiten Ihrem Facebook-Nutzerkonto zuordnen kann, 
-loggen Sie sich bitte aus Ihrem Facebook-Benutzerkonto aus. 
+Auf unseren Seiten sind Plugins des sozialen Netzwerks Facebook, 1601 South California Avenue, Palo Alto, CA 94304, USA integriert. Die Facebook-Plugins erkennen Sie an dem Facebook-Logo oder dem "Like-Button" ("Gefällt mir") auf unserer Seite. Eine Übersicht über die Facebook-Plugins finden Sie hier: http://developers.facebook.com/docs/plugins/.
+Wenn Sie unsere Seiten besuchen, wird über das Plugin eine direkte Verbindung zwischen Ihrem Browser und dem Facebook-Server hergestellt. Facebook erhält dadurch die Information, dass Sie mit Ihrer IP-Adresse unsere Seite besucht haben. Wenn Sie den Facebook "Like-Button" anklicken während Sie in Ihrem Facebook-Account eingeloggt sind, können Sie die Inhalte unserer Seiten auf Ihrem Facebook-Profil verlinken. Dadurch kann Facebook den Besuch unserer Seiten Ihrem Benutzerkonto zuordnen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch Facebook erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von facebook unter http://de-de.facebook.com/policy.php
 
-Datenschutzerkl�rung f�r die Nutzung von Google Analytics 
+Wenn Sie nicht wünschen, dass Facebook den Besuch unserer Seiten Ihrem Facebook-Nutzerkonto zuordnen kann, loggen Sie sich bitte aus Ihrem Facebook-Benutzerkonto aus.
 
-Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. ("Google"). 
-Google Analytics verwendet sog. "Cookies", Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse 
-der Benutzung der Website durch Sie erm�glichen. 
-Die durch den Cookie erzeugten Informationen �ber Ihre Benutzung dieser Website werden in der Regel an einen Server von 
-Google in den USA �bertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite wird 
-Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europ�ischen Union oder in anderen Vertragsstaaten 
-des Abkommens �ber den Europ�ischen Wirtschaftsraum zuvor gek�rzt. 
+Datenschutzerklärung für die Nutzung von Google Analytics
 
-Nur in Ausnahmef�llen wird die volle IP-Adresse an einen Server von Google in den USA �bertragen und dort gek�rzt. 
-Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, 
-um Reports �ber die Websiteaktivit�ten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung 
-verbundene Dienstleistungen gegen�ber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics 
-von Ihrem Browser �bermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengef�hrt. 
+Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. ("Google"). Google Analytics verwendet sog. "Cookies", Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt.
 
-Sie k�nnen die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; 
-wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht s�mtliche Funktionen dieser Website vollumf�nglich 
-werden nutzen k�nnen. Sie k�nnen dar�ber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website 
-bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie 
-das unter dem folgenden Link verf�gbare Browser-Plugin herunterladen und installieren: 
-http://tools.google.com/dlpage/gaoptout?hl=de. 
+Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt.
 
-Datenschutzerkl�rung f�r die Nutzung von Google Adsense 
+Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: http://tools.google.com/dlpage/gaoptout?hl=de.
 
-Diese Website benutzt Google AdSense, einen Dienst zum Einbinden von Werbeanzeigen der Google Inc. ("Google"). 
-Google AdSense verwendet sog. "Cookies", Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung 
-der Website erm�glicht. Google AdSense verwendet auch so genannte Web Beacons (unsichtbare Grafiken). Durch diese Web Beacons 
-k�nnen Informationen wie der Besucherverkehr auf diesen Seiten ausgewertet werden. 
+Datenschutzerklärung für die Nutzung von Google Adsense
 
-Die durch Cookies und Web Beacons erzeugten Informationen �ber die Benutzung dieser Website (einschlie�lich Ihrer IP-Adresse) und 
-Auslieferung von Werbeformaten werden an einen Server von Google in den USA �bertragen und dort gespeichert. Diese Informationen 
-k�nnen von Google an Vertragspartner von Google weiter gegeben werden. Google wird Ihre IP-Adresse jedoch nicht mit anderen von 
-Ihnen gespeicherten Daten zusammenf�hren. 
+Diese Website benutzt Google AdSense, einen Dienst zum Einbinden von Werbeanzeigen der Google Inc. ("Google"). Google AdSense verwendet sog. "Cookies", Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website ermöglicht. Google AdSense verwendet auch so genannte Web Beacons (unsichtbare Grafiken). Durch diese Web Beacons können Informationen wie der Besucherverkehr auf diesen Seiten ausgewertet werden.
 
-Sie k�nnen die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser Software verhindern; wir weisen Sie jedoch 
-darauf hin, dass Sie in diesem Fall gegebenenfalls nicht s�mtliche Funktionen dieser Website voll umf�nglich nutzen k�nnen. 
-Durch die Nutzung dieser Website erkl�ren Sie sich mit der Bearbeitung der �ber Sie erhobenen 
-Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden. 
+Die durch Cookies und Web Beacons erzeugten Informationen über die Benutzung dieser Website (einschließlich Ihrer IP-Adresse) und Auslieferung von Werbeformaten werden an einen Server von Google in den USA übertragen und dort gespeichert. Diese Informationen können von Google an Vertragspartner von Google weiter gegeben werden. Google wird Ihre IP-Adresse jedoch nicht mit anderen von Ihnen gespeicherten Daten zusammenführen.
 
-Datenschutzerkl�rung f�r die Nutzung von Google 1 
+Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website voll umfänglich nutzen können. Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.
 
-Erfassung und Weitergabe von Informationen: 
-Mithilfe der Google 1-Schaltfl�che k�nnen Sie Informationen weltweit ver�ffentlichen. �ber die Google 1-Schaltfl�che 
-erhalten Sie und andere Nutzer personalisierte Inhalte von Google und unseren Partnern. Google speichert sowohl die 
-Information, dass Sie f�r einen Inhalt 1 gegeben haben, als auch Informationen �ber die Seite, die Sie beim Klicken 
-auf 1 angesehen haben. Ihre 1 k�nnen als Hinweise zusammen mit Ihrem Profilnamen und Ihrem Foto in 
-Google-Diensten, wie etwa in Suchergebnissen oder in Ihrem Google-Profil, oder an anderen Stellen 
-auf Websites und Anzeigen im Internet eingeblendet werden. 
-Google zeichnet Informationen �ber Ihre 1-Aktivit�ten auf, um die Google-Dienste f�r Sie und andere zu verbessern. 
-Um die Google 1-Schaltfl�che verwenden zu k�nnen, ben�tigen Sie ein weltweit sichtbares, 
-�ffentliches Google-Profil, das zumindest den f�r das Profil gew�hlten Namen enthalten muss. 
-Dieser Name wird in allen Google-Diensten verwendet. In manchen F�llen kann dieser Name auch einen 
-anderen Namen ersetzen, den Sie beim Teilen von Inhalten �ber Ihr Google-Konto verwendet haben. 
-Die Identit�t Ihres Google-Profils kann Nutzern angezeigt werden, die Ihre E-Mail-Adresse kennen oder 
-�ber andere identifizierende Informationen von Ihnen verf�gen. 
+Datenschutzerklärung für die Nutzung von Google +1
 
-Verwendung der erfassten Informationen: 
-Neben den oben erl�uterten Verwendungszwecken werden die von Ihnen bereitgestellten Informationen 
-gem�� den geltenden Google-Datenschutzbestimmungen genutzt. Google ver�ffentlicht m�glicherweise 
-zusammengefasste Statistiken �ber die 1-Aktivit�ten der Nutzer bzw. gibt diese an Nutzer und Partner weiter, 
-wie etwa Publisher, Inserenten oder verbundene Websites. 
+Erfassung und Weitergabe von Informationen:
+Mithilfe der Google +1-Schaltfläche können Sie Informationen weltweit veröffentlichen. über die Google +1-Schaltfläche erhalten Sie und andere Nutzer personalisierte Inhalte von Google und unseren Partnern. Google speichert sowohl die Information, dass Sie für einen Inhalt +1 gegeben haben, als auch Informationen über die Seite, die Sie beim Klicken auf +1 angesehen haben. Ihre +1 können als Hinweise zusammen mit Ihrem Profilnamen und Ihrem Foto in Google-Diensten, wie etwa in Suchergebnissen oder in Ihrem Google-Profil, oder an anderen Stellen auf Websites und Anzeigen im Internet eingeblendet werden.
+Google zeichnet Informationen über Ihre +1-Aktivitäten auf, um die Google-Dienste für Sie und andere zu verbessern. Um die Google +1-Schaltfläche verwenden zu können, benötigen Sie ein weltweit sichtbares, öffentliches Google-Profil, das zumindest den für das Profil gewählten Namen enthalten muss. Dieser Name wird in allen Google-Diensten verwendet. In manchen Fällen kann dieser Name auch einen anderen Namen ersetzen, den Sie beim Teilen von Inhalten über Ihr Google-Konto verwendet haben. Die Identität Ihres Google-Profils kann Nutzern angezeigt werden, die Ihre E-Mail-Adresse kennen oder über andere identifizierende Informationen von Ihnen verfügen.
 
-Datenschutzerkl�rung f�r die Nutzung von Twitter 
+Verwendung der erfassten Informationen:
+Neben den oben erläuterten Verwendungszwecken werden die von Ihnen bereitgestellten Informationen gemäß den geltenden Google-Datenschutzbestimmungen genutzt. Google veröffentlicht möglicherweise zusammengefasste Statistiken über die +1-Aktivitäten der Nutzer bzw. gibt diese an Nutzer und Partner weiter, wie etwa Publisher, Inserenten oder verbundene Websites.
 
-Auf unseren Seiten sind Funktionen des Dienstes Twitter eingebunden. Diese Funktionen werden 
-angeboten durch die Twitter Inc., 795 Folsom St., Suite 600, San Francisco, CA 94107, USA. 
-Durch das Benutzen von Twitter und der Funktion "Re-Tweet" werden die von Ihnen besuchten Webseiten 
-mit Ihrem Twitter-Account verkn�pft und anderen Nutzern bekannt gegeben. Dabei werden auch Daten an Twitter �bertragen. 
+Datenschutzerklärung für die Nutzung von Twitter
 
-Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der �bermittelten Daten sowie deren Nutzung 
-durch Twitter erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerkl�rung von Twitter unter http://twitter.com/privacy. 
+Auf unseren Seiten sind Funktionen des Dienstes Twitter eingebunden. Diese Funktionen werden angeboten durch die Twitter Inc., 795 Folsom St., Suite 600, San Francisco, CA 94107, USA. Durch das Benutzen von Twitter und der Funktion "Re-Tweet" werden die von Ihnen besuchten Webseiten mit Ihrem Twitter-Account verknüpft und anderen Nutzern bekannt gegeben. Dabei werden auch Daten an Twitter übertragen.
 
-Ihre Datenschutzeinstellungen bei Twitter k�nnen Sie in den Konto-Einstellungen unter http://twitter.com/account/settings �ndern. 
+Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch Twitter erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Twitter unter http://twitter.com/privacy.
 
-Quellenangaben: eRecht24 Disclaimer, Facebook Datenschutzerkl�rung, Google Analytics Bedingungen, 
-Datenschutzerkl�rung f�r Google Adsense, Datenschutzerkl�rung Google 1, Datenschutzerkl�rung f�r Twitter 
+Ihre Datenschutzeinstellungen bei Twitter können Sie in den Konto-Einstellungen unter http://twitter.com/account/settings ändern.
 
-Kontakt: 
+Quellenangaben: eRecht24 Disclaimer, Facebook Datenschutzerklärung, Google Analytics Bedingungen, Datenschutzerklärung für Google Adsense, Datenschutzerklärung Google +1, Datenschutzerklärung für Twitter
+
+mailto:david@honisch.org
 
 https://www.letztechance.org/contact.html

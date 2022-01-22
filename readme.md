@@ -14,15 +14,17 @@ https://letztechance.org
 <a href="https://www.letztechance.org/vue/">LetzteChance.Org v.2.0 Alpha (powered by VUE)</a>
 
 ## Usage
-npm i webext
-git clone https://github.com/David-Honisch/LC2FFExt.git
-cd src
-run.bat
+
+- npm i webext
+- git clone https://github.com/David-Honisch/LC2FFExt.git
+- cd src
+- run.bat
 
 
 ## Test Usage
-npm run test
-npm run ktest
+
+- npm run test
+- npm run ktest
 
 ##Current package declaration
 <a href="package.json">package.json</a>

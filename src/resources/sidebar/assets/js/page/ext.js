@@ -115,6 +115,7 @@ try {
     webAPI._getREAD(webAPI.API.readAPI.replace('%s1', '28').replace('%s2', '224'), 28, '#rssfeeds');
     //annotate tabs !!
     $('#edit').append("<div id=\"editcnt\"></div><p>Annotate tab url</p>");
+    $('#edit').append("<div id=\"site-list\"></div>");
     editContentBox = document.querySelector("#editcnt");
     //optionslist
     /*
@@ -178,10 +179,30 @@ try {
         });
 
     //eo annotate
+    // browser.topSites.get()
+    //     .then((sites) => {
+    //         var div = document.getElementById('site-list');
 
+    //         if (!sites.length) {
+    //             div.innerText = 'No sites returned from the topSites API.';
+    //             return;
+    //         }
 
+    //         let ul = document.createElement('ul');
+    //         ul.className = 'list-group';
+    //         for (let site of sites) {
+    //             let li = document.createElement('li');
+    //             li.className = 'list-group-item';
+    //             let a = document.createElement('a');
+    //             a.href = site.url;
+    //             a.innerText = site.title || site.url;
+    //             li.appendChild(a);
+    //             ul.appendChild(li);
+    //         }
 
-
+    //         div.appendChild(ul);
+    //     });
+    //
     $(".cm-flex").on("click", function() {
         $("#cm-search-btn").click();
         $("#cm-search-btn").focus();

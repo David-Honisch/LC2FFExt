@@ -2,6 +2,24 @@
 document.cookie = "name=lc-api; SameSite=None; Secure";
 document.cookie = "lc-api=lc-api; SameSite=None; Secure";
 
+function setSessionItem(k, v) {
+    sessionStorage.setItem(k, v);
+}
+
+function getSessionItem(k) {
+    return sessionStorage.getItem(k);
+}
+
+function delSessionItem(k) {
+    sessionStorage.removeItem(k);
+}
+
+function clearSessionItems() {
+    sessionStorage.clear();
+}
+
+
+
 function getCookie() {
     return document.cookie;
 }
@@ -118,53 +136,6 @@ async function resetShortcut() {
 }
 //deprecated api - use object as param
 //deprecated api - use object as param
-function getFromFormStorage() {
-    return [{
-            commandName: 'title',
-            value: document.getElementById('title').value,
-            isactive: document.getElementById('title').value
-        },
-        {
-            commandName: 'isDSGVO',
-            value: (document.getElementById('isDSGVO').checked === true ? true : false),
-            isactive: (document.getElementById('isDSGVO').checked === true ? true : false)
-        },
-        {
-            commandName: 'isParseHTML',
-            value: (document.getElementById('isParseHTML').checked === true ? true : false),
-            isactive: (document.getElementById('isParseHTML').checked === true ? true : false)
-        },
-        {
-            commandName: 'isDOMReplaced',
-            value: (document.getElementById('isDOMReplaced').checked === true ? true : false),
-            isactive: (document.getElementById('isDOMReplaced').checked === true ? true : false)
-        }
-    ];
-}
-
-function getFromStorage() {
-    return [{
-            commandName: 'title',
-            value: getItem('title'),
-            isactive: getItem('title')
-        },
-        {
-            commandName: 'isDSGVO',
-            value: getItem('isDSGVO'),
-            isactive: (getItem('isDSGVO').checked === true ? true : false)
-        },
-        {
-            commandName: 'isParseHTML',
-            value: getItem('isParseHTML'),
-            isactive: (getItem('isParseHTML').checked === true ? true : false)
-        },
-        {
-            commandName: 'isDOMReplaced',
-            value: getItem('isDOMReplaced'),
-            isactive: (getItem('isDOMReplaced').checked === true ? true : false)
-        }
-    ];
-}
 
 function populateStorage() {
     console.log("populateStorage");
@@ -181,8 +152,13 @@ function populateStorage() {
     saveLocal('isDOMReplaced', isDOMReplaced);
     //values
     saveLocal('domreplaceText', replaceText);
+    setSessionItem('domreplaceText=', replaceText);
+
     saveLocal('replaceText', replaceText);
-    saveLocal('store', JSON.stringify(getFromFormStorage()));
+    setSessionItem('replaceText', replaceText);
+    setCookie('replaceText=' + replaceText);
+
+    // saveLocal('store', JSON.stringify(getFromFormStorage()));
     saveLocal('title', title);
     saveLocal('product', product);
     setStorage();

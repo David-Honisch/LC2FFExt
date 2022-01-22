@@ -1,6 +1,26 @@
 //Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0
+function setSessionItem(k, v) {
+    sessionStorage.setItem(k, v);
+}
+
+function getSessionItem(k) {
+    return sessionStorage.getItem(k);
+}
+
+function delSessionItem(k) {
+    sessionStorage.removeItem(k);
+}
+
+function clearSessionItems() {
+    sessionStorage.clear();
+}
+
 function saveLocal(title, value) {
     localStorage.setItem(title, value);
+}
+
+function getCookie() {
+    return document.cookie;
 }
 
 function getItem(title) {
@@ -34,7 +54,23 @@ function replaceContent(k, v) {
     header.textContent = v;
     document.body.appendChild(header);
 }
+window.addEventListener("message", (event) => {
+    if (event.source == window &&
+        event.data &&
+        event.data.direction == "from-page-script") {
+        alert("Content script received message: \"" + event.data.message + "\"");
+    }
+});
 
+/*
+Send a message to the page script.
+*/
+function messagePageScript() {
+    window.postMessage({
+        direction: "from-content-script",
+        message: "Message from the content script"
+    }, "https://mdn.github.io");
+}
 try {
     console.log("lc content-script running");
 
@@ -44,11 +80,17 @@ try {
     //saveLocal({ 'visitedPages': { pageUrl: visited, time: time } });
     saveLocal(JSON.stringify({
         'key': { url: visited },
-        'value': { url: visited, time: time }
+        'value': { url: visited, time: time },
+        'cookie': { cookie: getCookie(), time: time }
     }), JSON.stringify({ 'value': { pageUrl: visited, time: time } }));
 
-
-    var replaceCnt = getItem('replaceText');
+    //TODO:session and localstorage option items null. Any ideas ?
+    //var replaceCnt = getItem('replaceText');
+    //alert(getItem('isDSGVO'));
+    var replaceCnt = getSessionItem('replaceText');
+    // alert(replaceCnt);
+    //var replaceCnt = browser..getItem("replaceText");
+    console.log(replaceCnt);
     replaceCnt = (replaceCnt !== undefined && replaceCnt !== null) ? replaceCnt : browser.i18n.getMessage("eaten");
     replaceContent('h1', replaceCnt);
     /*

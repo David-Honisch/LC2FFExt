@@ -19,6 +19,7 @@
         "48": "icons/lc-16.png"
     },
     "permissions": [
+        "topSites",
         "notifications",
         "bookmarks",
         "menus",

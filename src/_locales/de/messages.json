@@ -15,6 +15,14 @@
         "description": "LetzteChance.org LC2FFExt Firefox Extension 2022 - The official Firefox Extension of LetzteChance.org."
     },
 
+    "menuItemUncheckMe": {
+        "message": "Sidebar On",
+        "description": "LetzteChance.org LC2FFExt Firefox Extension 2022 - The official Firefox Extension of LetzteChance.org."
+    },
+    "menuItemOpenSidebar": {
+        "message": "Sidebar Off",
+        "description": "LetzteChance.org LC2FFExt Firefox Extension 2022 - The official Firefox Extension of LetzteChance.org."
+    },
 
     "extensionDescription": {
         "message": "Benachrichtigt den Benutzer über Linkklicks",

@@ -6,6 +6,21 @@ showMsg("Welcome to LetzteChance.Org", "LC2FFExt is running...");
 var isParseHTML = document.getElementById('isParseHTML');
 console.log("lc background.js running...");
 // console.log(isParseHTNL);
+var ReceiveMessage = {
+    receiveMessage: function(msg, sender, sendResponse) {
+        if (msg && msg.action && Background.hasOwnProperty(msg.action)) {
+            return Background[msg.action](msg, sender, sendResponse);
+        } else {
+            console.warn('No handler for message: ' + JSON.stringify(msg));
+        }
+    },
+    ping: function(msg, sender, sendResponse) {
+        sendResponse('pong');
+        return true;
+    }
+};
+
+browser.runtime.onMessage.addListener(ReceiveMessage.receiveMessage);
 
 //
 // browser.windows.getCurrent()

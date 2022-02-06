@@ -1,5 +1,6 @@
 // $('#title').append('blah');;
 try {
+    var errorCnt = document.getElementById("error");
     var choose = document.getElementById("choose");
     var choices = document.getElementsByClassName("ua-choices");
     // var isParseHTML = document.getElementsByClassName("isParseHTML");
@@ -24,6 +25,7 @@ try {
     // isParseHTML.checked = getItem("isParseHTML");
     choose.innerHTML += JSON.stringify(getItem('title'));
 } catch (error) {
+    errorCnt.innerHTML += JSON.stringify(error);
     console.error(error);
     console.error(error.stack);
 }

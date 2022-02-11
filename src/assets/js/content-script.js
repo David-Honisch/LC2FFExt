@@ -51,7 +51,8 @@ function notifyExtension(e) {
 function replaceContent(k, v) {
     var header = document.createElement(k);
     console.log(k + "" + v);
-    header.textContent = v;
+    // header.textContent = v;
+    header.innerHTML = v;
     document.body.appendChild(header);
 }
 window.addEventListener("message", (event) => {
@@ -71,9 +72,10 @@ function messagePageScript() {
         message: "Message from the content script"
     }, "https://mdn.github.io");
 }
+
+
 try {
     console.log("lc content-script running");
-
     var visited = window.location.href;
     var time = +new Date();
     // browser.storage.sync.set({ 'visitedPages': { pageUrl: visited, time: time } }, function() {
@@ -84,15 +86,11 @@ try {
         'cookie': { cookie: getCookie(), time: time }
     }), JSON.stringify({ 'value': { pageUrl: visited, time: time } }));
 
-    //TODO:session and localstorage option items null. Any ideas ?
-    //var replaceCnt = getItem('replaceText');
-    //alert(getItem('isDSGVO'));
-    var replaceCnt = getSessionItem('replaceText');
-    // alert(replaceCnt);
-    //var replaceCnt = browser..getItem("replaceText");
-    console.log(replaceCnt);
+    // var replaceCnt = getSessionItem('replaceText');    
+    var replaceCnt = getItem("replaceText");
+
     replaceCnt = (replaceCnt !== undefined && replaceCnt !== null) ? replaceCnt : browser.i18n.getMessage("eaten");
-    replaceContent('h1', replaceCnt);
+    replaceContent('div', replaceCnt);
     /*
     Add notifyExtension() as a listener to click events.
     */

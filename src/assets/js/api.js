@@ -146,6 +146,14 @@ function populateStorage() {
     var isDOMReplaced = ($('#isDOMReplaced').prop('checked') === true ? true : false);
     var replaceText = $('#replaceText').val();
     // $('#debug').append('<br>Populate:isDSGVO:' + isDSGVO + '<br>isDOMReplaced:' + isDOMReplaced + '<br>isParseHTML:' + isParseHTML);
+    browser.storage.local.set({
+        lcOptions: {
+            isDSGVO: isDSGVO,
+            isDOMReplaced: isDOMReplaced
+        }
+    });
+    const getAuthStoredSettings = browser.storage.local.get();
+    console.log(JSON.stringify(getAuthStoredSettings));
     //checkboxes
     saveLocal('isDSGVO', isDSGVO);
     saveLocal('isParseHTML', isParseHTML);
@@ -161,6 +169,7 @@ function populateStorage() {
     // saveLocal('store', JSON.stringify(getFromFormStorage()));
     saveLocal('title', title);
     saveLocal('product', product);
+    //
     setStorage();
 }
 

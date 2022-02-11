@@ -3,8 +3,8 @@
     "manifest_version": 2,
     "name": "__MSG_extensionName__",
     "description": "__MSG_extensionDescription__",
-    "version": "1.44",
-    "versionString": "1.44",
+    "version": "1.45",
+    "versionString": "1.45",
     "homepage_url": "https://github.com/David-Honisch/LC2FFExt",
     "update-url": "https://www.letztechance.org/lc2firefoxaddon",
     "default_locale": "de",
@@ -19,14 +19,17 @@
         "48": "icons/lc-16.png"
     },
     "permissions": [
-        "topSites",
-        "notifications",
+        "activeTab",
         "bookmarks",
+        "notifications",
+        "nativeMessaging",
         "menus",
         "storage",
         "tabs",
-        "activeTab",
-        "webRequest", "webRequestBlocking", "https://www.letztechance.org/*"
+        "topSites",
+        "webRequest",
+        "webRequestBlocking",
+        "https://www.letztechance.org/*"
     ],
 
     "protocol_handlers": [{
@@ -35,17 +38,12 @@
         "uriTemplate": "https://www.letztechance.org/openlink?https://mibbit.com/?url=%s"
     }],
     "background": {
-        "scripts": ["assets/js/api.js", "assets/js/menu.js", "assets/js/background.js", "assets/js/bookmark.js", "assets/js/command.js", "assets/js/export.js", "assets/js/filter.js", "assets/js/notify.js", "assets/js/message.js", "assets/js/permissions.js", "assets/js/rootcert.js", "assets/js/useragent.js"]
+        "scripts": ["assets/js/api.js", "assets/js/auth/auth.js", "assets/js/auth/storage.js", "assets/js/menu.js", "assets/js/background.js", "assets/js/bookmark.js", "assets/js/command.js", "assets/js/export.js", "assets/js/filter.js", "assets/js/notify.js", "assets/js/message.js", "assets/js/permissions.js", "assets/js/rootcert.js", "assets/js/useragent.js"]
     },
     "content_scripts": [{
-            "matches": ["<all_urls>"],
-            "js": ["assets/js/export.js"]
-        },
-        {
-            "matches": ["<all_urls>"],
-            "js": ["assets/js/content-script.js"]
-        }
-    ],
+        "matches": ["<all_urls>"],
+        "js": ["assets/js/export.js", "assets/js/content-script.js"]
+    }],
     "commands": {
         "toggle-feature": {
             "suggested_key": { "default": "Ctrl+Shift+U" },
@@ -78,6 +76,7 @@
     },
     "browser_specific_settings": {
         "gecko": {
+            "id": "lc2ping_pong@www.letztechance.org",
             "update_url": "https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/lc2ffextupdates.json"
         }
     }

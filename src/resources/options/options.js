@@ -68,6 +68,8 @@ function printOptions(out) {
 console.log("Ext running...");
 try {
     out.innerHTML = "";
+    var hptitle = document.querySelector('#hptitle');
+    var title = document.querySelector('#title');
     var product = browser.i18n.getMessage("product");
     var eaten = browser.i18n.getMessage("eaten");
     $('#hptitle').val(product);

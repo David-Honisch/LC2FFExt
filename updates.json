@@ -38,6 +38,13 @@
                     "applications": {
                         "gecko": { "strict_min_version": "40" }
                     }
+                },
+				{
+                    "version": "1.45",
+                    "update_link": "https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/letztechanceorg_menu-1.45-fx.xpi",
+                    "applications": {
+                        "gecko": { "strict_min_version": "40" }
+                    }
                 }
             ]
         }

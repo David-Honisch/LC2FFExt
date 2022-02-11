@@ -5,6 +5,7 @@ showMsg("Welcome to LetzteChance.Org", "LC2FFExt is running...");
 //Get Option
 var isParseHTML = document.getElementById('isParseHTML');
 console.log("lc background.js running...");
+addAppBrowserAction();
 // console.log(isParseHTNL);
 var ReceiveMessage = {
     receiveMessage: function(msg, sender, sendResponse) {
@@ -21,6 +22,18 @@ var ReceiveMessage = {
 };
 
 browser.runtime.onMessage.addListener(ReceiveMessage.receiveMessage);
+/**
+ * Show a notification when we get messages from the content script.
+ */
+browser.runtime.onMessage.addListener((message) => {
+    var msg = JSON.stringify(message.content);
+    browser.notifications.create({
+        type: "basic",
+        title: "Message from the page",
+        message: msg
+    });
+    alert('Listener end');
+});
 
 //
 // browser.windows.getCurrent()
@@ -82,6 +95,30 @@ browser.browserAction.onClicked.addListener(function(tab) {
         setBrowserActionButton(browserButtonStates[newState]);
     });
 });
+
+function addAppBrowserAction() {
+    showMsg("Welcome to LetzteChance.Org", "LC2FFExt is running...");
+    /*
+    On startup, connect to the "ping_pong" app.
+    */
+    var app = browser.runtime.connectNative("ping_pong");
+    showMsg("LetzteChance.Org Service:", app);
+    /*
+    Listen for messages from the app.
+    */
+    app.onMessage.addListener((response) => {
+        showMsg("received:", response);
+        console.log("Received: " + response);
+    });
+
+    /*
+    On a click on the browser action, send the app a message.
+    */
+    browser.browserAction.onClicked.addListener(() => {
+        console.log("Sending:  ping");
+        app.postMessage("ping");
+    });
+}
 
 function setBrowserActionButton(tabId, details) {
     if (typeof tabId === 'object' && tabId !== null) {

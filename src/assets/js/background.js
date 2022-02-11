@@ -32,7 +32,7 @@ browser.runtime.onMessage.addListener((message) => {
         title: "Message from the page",
         message: msg
     });
-    alert('Listener end');
+    // alert('Listener end');
 });
 
 //

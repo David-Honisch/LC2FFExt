@@ -1,4 +1,22 @@
 var apiParseAPI = "https://www.letztechance.org/?q=read&value1=22&value2=3&plugin=webparser&proxy=&port=&Submit=Submit&query=";
+
+function getDocument(msg) {
+    return {
+        title: msg.title,
+        body: msg.body,
+        links: getLinks(msg)
+    }
+
+}
+
+function getLinks(doc) {
+    var result = "";
+    for (var v in doc.links) {
+        result += "[url]<a href=\"" + apiParseAPI + doc.links[v] + "\" target=\"_blank\">" + doc.links[v] + "</a>[url]<br/>";
+    }
+    return result;
+
+}
 /**
  * Define a function in the content script's scope, then export it
  * into the page script's scope.
@@ -7,25 +25,11 @@ function notify(msg) {
     var out = document.querySelector('#lc-script-out');
     var doc = getDocument(msg);
     console.log('notify:' + doc.title);
-    var result = "";
-    for (var v in doc.links) {
-        result += "[url]<a href=\"" + apiParseAPI + doc.links[v] + "\" target=\"_blank\">" + doc.links[v] + "</a>[url]<br/>";
-    }
+    var result = doc.links;
     out.innerHTML = result;
     browser.runtime.sendMessage({ content: "Function call: " + msg });
 }
-
-function getDocument(msg) {
-    return {
-        title: msg.title,
-        body: msg.body,
-        links: msg.links
-    }
-
-}
-
 exportFunction(notify, window, { defineAs: 'notify' });
-
 /**
  * Create an object that contains functions in the content script's scope,
  * then clone it into the page script's scope.
@@ -38,10 +42,7 @@ var messenger = {
         var out = document.querySelector('#lc-script-out');
         var doc = getDocument(msg);
         console.log('messenger notify:' + doc.title);
-        var result = "";
-        for (var v in doc.links) {
-            result += "[url]<a href=\"" + apiParseAPI + doc.links[v] + "\" target=\"_blank\">" + doc.links[v] + "</a>[url]<br/>";
-        }
+        var result = doc.links;
         out.innerHTML = result;
         browser.runtime.sendMessage({ content: "Object method call: " + msg });
     }

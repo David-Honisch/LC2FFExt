@@ -76,7 +76,7 @@
     },
     "browser_specific_settings": {
         "gecko": {
-            "id": "lc2ping_pong@www.letztechance.org",
+            "id": "{c55f768c-d2bf-4587-97f8-8a43cbc5d259}",
             "update_url": "https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/lc2ffextupdates.json"
         }
     }

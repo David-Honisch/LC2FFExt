@@ -44,6 +44,8 @@ var messenger = {
         console.log('messenger notify:' + doc.title);
         var result = doc.links;
         out.innerHTML = result;
+
+        //doc.body += "<h1>blah</h1>";
         browser.runtime.sendMessage({ content: "Object method call: " + msg });
     }
 };

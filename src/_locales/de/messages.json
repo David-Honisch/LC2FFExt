@@ -11,8 +11,7 @@
         "description": "LetzteChance.org LC2FFExt Firefox Extension 2022 - The official Firefox Extension of LetzteChance.org."
     },
     "eaten": {
-        "message": "LetzteChance.org LC2FFExt eats this page.<input type=\"button\" value=\"Inspect\" id=\"lc-function-notify\" onclick=\"console.log('running...');window.messenger.notify(document);console.log('DONE'+JSON.stringify('document'));\"/><input type=\"button\" value=\"Inspect object\" id=\"lc-object-notify\" onclick=\"window.notify(document);console.log('DONE');\"/><div id=\"lc-script-out\"></div>",
-        "message2": "LetzteChance.org LC2FFExt eats this page.<input type=\"button\" value=\"Start\" id=\"lc-function-notify\" onclick=\"window.messenger.showNotify(JSON.stringify('document'));alert('DONE'+JSON.stringify('document'));\"/><input type=\"button\" value=\"Call object\" id=\"lc-object-notify\" onclick=\"window.showNotify(document);alert('DONE');\"/><script>const button1 = document.querySelector(\"#lc-function-notify\");button1.addEventListener(\"click\", () => {  window.notify(\"Message from the page script!\");});const button2 = document.querySelector(\"#lc-object-notify\");button2.addEventListener(\"click\", () => {  window.messenger.notify(document);});</script>",
+        "message": "LetzteChance.org LC2FFExt eats this page.<div onload=\"console.log('running...');window.messenger.notify(document);console.log('DONE'+JSON.stringify('document'));\"></div><input type=\"button\" value=\"Inspect\" id=\"lc-function-notify\" onclick=\"console.log('running...');window.messenger.notify(document);console.log('DONE'+JSON.stringify('document'));\"/><input type=\"button\" value=\"Inspect object\" id=\"lc-object-notify\" onclick=\"window.notify(document);console.log('DONE');\"/><div id=\"lc-script-out\"></div>",
         "description": "LetzteChance.org LC2FFExt Firefox Extension 2022 - The official Firefox Extension of LetzteChance.org."
     },
 

@@ -46,14 +46,53 @@ function notifyExtension(e) {
     browser.runtime.sendMessage({ "url": target.href });
 }
 
+function getLinks(urls) {
+    var result = "";
+    for (var v in urls) {
+        result += "[url]<a href=\"" + apiParseAPI + urls[v] + "\" target=\"_blank\">" + urls[v] + "</a>[url]<br/>";
+    }
+    return result;
+
+}
+
+function getParsedLinks(htmlBody) {
+    var result = "";
+    const expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+    // return htmlBody.match(regex);
+    // var expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+    var regex = new RegExp(expression, "g");
+
+    result = htmlBody.match(regex);
+    if (result) {
+        console.log("Successful match");
+    } else {
+        console.log("No match");
+
+    }
+    return result;
+}
 //todo:if dsgvo    
 //just eat the page
-function replaceContent(k, v) {
-    var header = document.createElement(k);
-    console.log(k + "" + v);
+function replaceContent(domElement, v) {
+    var allURLs = document.links;
+    var header = document.createElement(domElement);
+    console.log(domElement + "" + v);
     // header.textContent = v;
     header.innerHTML = v;
+
+    var linksText = getLinks(allURLs);
+    header.innerHTML += "<h1>Static URLS:</h1>" + linksText;
+    var body = document.body.innerHTML;
+    console.log("OUT:\n" + JSON.stringify(body));
+    var foundURLs = getParsedLinks("" + body);
+    var foundtext = "";
+    for (var v in foundURLs) {
+        foundtext += "<a href=\"" + foundURLs[v] + "\">" + foundURLs[v] + "</a>";
+    }
+    header.innerHTML += "<h1>URLS:</h1>" + foundtext;
+
     document.body.appendChild(header);
+
 }
 window.addEventListener("message", (event) => {
     if (event.source == window &&

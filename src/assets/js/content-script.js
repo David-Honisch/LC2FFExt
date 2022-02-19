@@ -1,4 +1,96 @@
 //Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0
+function HashMap(TKey, TValue) {
+    var db = [];
+    var keyType, valueType;
+
+    (function() {
+        keyType = TKey;
+        valueType = TValue;
+    })();
+
+    var getIndexOfKey = function(key) {
+        if (typeof key !== keyType)
+            throw new Error('Type of key should be ' + keyType);
+        for (var i = 0; i < db.length; i++) {
+            if (db[i][0] == key)
+                return i;
+        }
+        return -1;
+    }
+
+    this.add = function(key, value) {
+        if (typeof key !== keyType) {
+            throw new Error('Type of key should be ' + keyType);
+        } else if (typeof value !== valueType) {
+            throw new Error('Type of value should be ' + valueType);
+        }
+        var index = getIndexOfKey(key);
+        if (index === -1)
+            db.push([key, value]);
+        else
+            db[index][1] = value;
+        return this;
+    }
+
+    this.get = function(key) {
+        if (typeof key !== keyType || db.length === 0)
+            return null;
+        for (var i = 0; i < db.length; i++) {
+            if (db[i][0] == key)
+                return db[i][1];
+        }
+        return null;
+    }
+
+    this.size = function() {
+        return db.length;
+    }
+
+    this.keys = function() {
+        if (db.length === 0)
+            return [];
+        var result = [];
+        for (var i = 0; i < db.length; i++) {
+            result.push(db[i][0]);
+        }
+        return result;
+    }
+
+    this.values = function() {
+        if (db.length === 0)
+            return [];
+        var result = [];
+        for (var i = 0; i < db.length; i++) {
+            result.push(db[i][1]);
+        }
+        return result;
+    }
+
+    this.randomize = function() {
+        if (db.length === 0)
+            return this;
+        var currentIndex = db.length,
+            temporaryValue, randomIndex;
+        while (0 !== currentIndex) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            temporaryValue = db[currentIndex];
+            db[currentIndex] = db[randomIndex];
+            db[randomIndex] = temporaryValue;
+        }
+        return this;
+    }
+
+    this.iterate = function(callback) {
+        if (db.length === 0)
+            return false;
+        for (var i = 0; i < db.length; i++) {
+            callback(db[i][0], db[i][1]);
+        }
+        return true;
+    }
+}
+
 function setSessionItem(k, v) {
     sessionStorage.setItem(k, v);
 }
@@ -58,40 +150,56 @@ function getLinks(urls) {
 function getParsedLinks(htmlBody) {
     var result = "";
     const expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
-    // return htmlBody.match(regex);
-    // var expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
     var regex = new RegExp(expression, "g");
-
     result = htmlBody.match(regex);
     if (result) {
         console.log("Successful match");
     } else {
         console.log("No match");
-
     }
     return result;
 }
+
+function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
+}
 //todo:if dsgvo    
 //just eat the page
-function replaceContent(domElement, v) {
-    var allURLs = document.links;
-    var header = document.createElement(domElement);
-    console.log(domElement + "" + v);
-    // header.textContent = v;
-    header.innerHTML = v;
-
-    var linksText = getLinks(allURLs);
-    header.innerHTML += "<h1>Static URLS:</h1>" + linksText;
-    var body = document.body.innerHTML;
-    console.log("OUT:\n" + JSON.stringify(body));
-    var foundURLs = getParsedLinks("" + body);
+function getUniqueUrls(document) {
+    var urls = [];
     var foundtext = "";
-    for (var v in foundURLs) {
-        foundtext += "<a href=\"" + foundURLs[v] + "\">" + foundURLs[v] + "</a>";
+    for (var v in document.links) {
+        urls.push("" + document.links[v]);
     }
-    header.innerHTML += "<h1>URLS:</h1>" + foundtext;
+    var urls = urls.filter(onlyUnique);
+    console.log("Length:" + urls.length + "");
+    var foundURLs = getParsedLinks("" + document.body.innerHTML);
+    for (var v in foundURLs) {
+        urls.push("" + foundURLs[v]);
+    }
+    console.log("Length:" + urls.length + " before...");
+    urls = foundURLs.filter(onlyUnique);
+    console.log("Length:" + urls.length + " after...");
+    return urls;
+}
 
+function printReplaceContent(urls, header, foundtext, document) {
+    for (var v in urls) {
+        foundtext += "[url]<a href=\"" + urls[v] + "\">" + urls[v] + "</a>[/url]<br/>";
+    }
+    console.log("Length:" + urls.length + "");
+    header.innerHTML += "<h1>URLS:</h1>" + foundtext;
     document.body.appendChild(header);
+}
+
+function replaceContent(domElement, outPutText) {
+    var urls = [];
+    var foundtext = "";
+    var header = document.createElement(domElement);
+    console.log(domElement + "" + outPutText);
+    urls = getUniqueUrls(document);
+    console.log("Length:" + urls.length + " after...");
+    printReplaceContent(urls, header, foundtext, document);
 
 }
 window.addEventListener("message", (event) => {
@@ -111,7 +219,6 @@ function messagePageScript() {
         message: "Message from the content script"
     }, "https://mdn.github.io");
 }
-
 
 try {
     console.log("lc content-script running");

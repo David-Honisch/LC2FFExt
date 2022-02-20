@@ -163,19 +163,88 @@ function getParsedLinks(htmlBody) {
 function onlyUnique(value, index, self) {
     return self.indexOf(value) === index;
 }
-//todo:if dsgvo    
-//just eat the page
+
+function reltoabs(link) {
+    var a;
+    return function(url) {
+        if (!a) a = document.createElement('a');
+        a.href = url;
+        return a.href;
+    };
+}
+
+function reltoabsRegex(link) {
+    let absLink = location.href.split("/");
+    let relLink = link;
+    let slashesNum = link.match(/[.]{2}\//g) ? link.match(/[.]{2}\//g).length : 0;
+    for (let i = 0; i < slashesNum + 1; i++) {
+        relLink = relLink.replace("../", "");
+        absLink.pop();
+    }
+    absLink = absLink.join("/");
+    absLink += "/" + relLink;
+    return absLink;
+}
+var resolveURL = function resolve(url, base) {
+        base = base !== undefined ? base : document.baseURI;
+        if ('string' !== typeof url || !url) {
+            return null; // wrong or empty url
+        } else if (url.match(/^[a-z]+\:\/\//i)) {
+            return url; // url is absolute already 
+        } else if (url.match(/^\/\//)) {
+            return 'http:' + url; // url is absolute already 
+        } else if (url.match(/^[a-z]+\:/i)) {
+            return url; // data URI, mailto:, tel:, etc.
+        } else if ('string' !== typeof base) {
+            var a = document.createElement('a');
+            a.href = url; // try to resolve url without base  
+            if (!a.pathname) {
+                return null; // url not valid 
+            }
+            return 'http://' + url;
+        } else {
+            base = resolve(base); // check base
+            if (base === null) {
+                return null; // wrong base
+            }
+        }
+        var a = document.createElement('a');
+        a.href = base;
+
+        if (url[0] === '/') {
+            base = []; // rooted path
+        } else {
+            base = a.pathname.split('/'); // relative path
+            base.pop();
+        }
+        url = url.split('/');
+        for (var i = 0; i < url.length; ++i) {
+            if (url[i] === '.') { // current directory
+                continue;
+            }
+            if (url[i] === '..') { // parent directory
+                if ('undefined' === typeof base.pop() || base.length === 0) {
+                    return null; // wrong url accessing non-existing parent directories
+                }
+            } else { // child directory
+                base.push(url[i]);
+            }
+        }
+        return a.protocol + '//' + a.hostname + base.join('/');
+    }
+    //todo:if dsgvo    
+    //just eat the page
 function getUniqueUrls(document) {
     var urls = [];
     var foundtext = "";
     for (var v in document.links) {
-        urls.push("" + document.links[v]);
+        urls.push("" + (reltoabs("" + document.links[v]).href));
     }
     var urls = urls.filter(onlyUnique);
     console.log("Length:" + urls.length + "");
     var foundURLs = getParsedLinks("" + document.body.innerHTML);
     for (var v in foundURLs) {
-        urls.push("" + foundURLs[v]);
+        urls.push("" + (reltoabs("" + foundURLs[v]).href));
     }
     console.log("Length:" + urls.length + " before...");
     urls = foundURLs.filter(onlyUnique);

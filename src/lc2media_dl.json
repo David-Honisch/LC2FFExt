@@ -1,0 +1,7 @@
+{
+  "name": "lc2media_dl",
+  "description": "Letztechance.org native messaging for webrequest link processing",
+  "path": "c:\\utils\\lc2media\\app.bat",
+  "type": "stdio",
+  "allowed_extensions": [ "lc2media_dl@demo" ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "jquery-linkalize",
+  "main": "jquery.linkalize.js",
+  "version": "1.0.0",
+  "authors": [
+    "Bruno Konrad <bruno.skon@gmail.com>"
+  ],
+  "description": "Find URLs and create a tags inside an element",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    ".bower.json",
+    "bower.json",
+    "node_modules",
+    "bower_components",
+    "spec",
+    "package.json",
+    "karma.conf.js",
+    ".gitignore"
+  ]
+}

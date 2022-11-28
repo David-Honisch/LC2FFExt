@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="choose_ua.css" />
+
+</head>
+
+<body>
+    <h1 id="hptitle">LC2FFExt</h1>
+    <fieldset>
+        <label>Title:</label>
+        <input type="text" id="title" disabled><br>
+
+
+
+        <label>Username:</label>
+        <input id="username" type="text" />
+        <label>Password: </label>
+        <input id="password" type="text" />
+
+    </fieldset>
+    <fieldset>
+        <label>DSGVO:</label>
+        <input type="checkbox" id="isDSGVO" disabled>
+    </fieldset>
+    <fieldset>
+        <label>Dom Replacement:</label>
+        <input type="checkbox" id="isDOMReplaced" disabled>
+        <textarea id="domreplaceText" cols="60" rows="1" disabled></textarea>
+    </fieldset>
+    <fieldset>
+        <label>Parse HTML:</label>
+        <input type="checkbox" id="isParseHTML" disabled><br>
+        <textarea id="replaceText" cols="60" rows="2" disabled></textarea>
+    </fieldset>
+    <fieldset>
+        <label>Options</label>
+        <div id="choose">
+            <select>
+                <option value="all">all</option>            
+            </select>
+            <br>
+
+
+            <!-- <label id="isParseHTMLlabel">DSGVO (on/off)</label>
+            <input type="checkbox" id="isDSGVO" name="isDSGVO" disabled checked />
+
+            <label id="isParseHTMLlabel">isParseHTML</label>
+            <input type="checkbox" id="isParseHTML" name="isParseHTML" disabled checked /> -->
+
+            <br><label id="searchpatternlabel">search pattern</label>
+            <input type="text" id="pattern" name="pattern" />
+            <br><label id="bodylabel">body</label>
+            <input type="text" id="body" name="body" />
+        </div>
+    </fieldset>
+    <fieldset>
+        <label>Ext Options</label>
+        <div id="extchoose">
+            <select>
+                <option value="all">all</option>
+            </select>
+        </div>
+    </fieldset>
+    <fieldset>
+        <label>User Agent:</label>
+        <div class="ua-choices">
+            <div class="ua-choice">Firefox 65</div>
+            <div class="ua-choice">Firefox 64</div>
+            <div class="ua-choice">Firefox 55</div>
+            <div class="ua-choice">Firefox 41</div>
+            <div class="ua-choice">Chrome 41</div>
+            <div class="ua-choice">Safari 41</div>
+            <div class="ua-choice">IE 11</div>
+            <div class="ua-choice">IE 10</div>
+            <div class="ua-choice">IE 9</div>
+            <div class="ua-choice">IE 8</div>
+        </div>
+    </fieldset>
+    <script src="../../resources/sidebar/assets/js/jquery/jquery.min.js"></script>
+    <script src="../../assets/js/api.js"></script>
+    <script src="choose.js"></script>
+    <!-- <script src="../../resources/options/authoptions.js"></script> -->
+</body>
+
+</html>

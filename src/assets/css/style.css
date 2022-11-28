@@ -1,0 +1,20 @@
+body {
+    color: #000000;
+}
+
+.logo {
+    width: 98%;
+}
+
+fieldset {
+    /* border: 2px #000000; */
+    border-top: #ffffff;
+    border-left: #ffffff;
+    border-radius: 8px;
+}
+
+p.bg-danger,
+p.bg-success,
+p.bg-warning {
+    padding: 1em;
+}

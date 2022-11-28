@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<r:RDF xmlns:r="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.mozilla.org/2004/em-rdf#">
+	<r:Description about="urn:mozilla:extension:{c55f768c-d2bf-4587-97f8-8a43cbc5d259}">
+		<updates>
+		<r:Seq>
+		<r:li>
+		<r:Description>
+			<version>1.3</version>
+			<targetApplication>
+				<r:Description>
+					<id>{c55f768c-d2bf-4587-97f8-8a43cbc5d259}</id>
+					<minVersion>1.3</minVersion>
+					<maxVersion>1.5</maxVersion>
+					<updateLink>https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/src/web-ext-artifacts/lc2ffext-1.31.zip</updateLink>
+				</r:Description>
+			</targetApplication>
+		</r:Description>
+		</r:li>
+		</r:Seq>
+		</updates>
+		<version>1.2</version>
+		<updateLink>https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/src/web-ext-artifacts/lc2ffext-1.31.zip</updateLink>
+	</r:Description>
+</r:RDF>

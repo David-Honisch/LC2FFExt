@@ -1,0 +1,64 @@
+{
+    "extensionName": {
+        "message": "LC2FFExt",
+        "homepage": "LC2FFExt",
+        "updateurl": "LC2FFExt",
+        "product": "LC2FFExt Web Extension",
+        "description": "LC2FFExt Firefox Extension of LetzteChance.org."
+    },
+    "product": {
+        "message": "LetzteChance.org LC2FFExt Firefox Extension 2022.",
+        "description": "LetzteChance.org LC2FFExt Firefox Extension 2022 - The official Firefox Extension of LetzteChance.org."
+    },
+
+    "eaten": {
+        "message": "LetzteChance.org LC2FFExt eats this page.",
+        "description": "LetzteChance.org LC2FFExt Firefox Extension 2022 - The official Firefox Extension of LetzteChance.org."
+    },
+
+    "extensionDescription": {
+        "message": "LetzteChance.Org - Menu Links & APIs",
+        "description": "Description of the add-on."
+    },
+
+    "menuItemSelectionLogger": {
+        "message": "Log '%s' to the browser console",
+        "description": "Title of context menu item that logs the selected text when clicked."
+    },
+
+    "menuItemRemoveMe": {
+        "message": "Remove me!",
+        "description": "Title of context menu item that removes itself when clicked."
+    },
+
+    "menuItemGreenify": {
+        "message": "Greenify",
+        "description": "Title of context menu item that adds a green border when clicked."
+    },
+
+    "menuItemBluify": {
+        "message": "Bluify",
+        "description": "Title of context menu item that adds a green border when clicked."
+    },
+
+    "menuItemCheckMe": {
+        "message": "Check me",
+        "description": "Title of context menu item when the item is checked."
+    },
+
+    "menuItemUncheckMe": {
+        "message": "Uncheck me",
+        "description": "Title of context menu item when the item is unchecked."
+    },
+
+    "menuItemOpenSidebar": {
+        "message": "Open sidebar",
+        "description": "Title of context menu item that opens a sidebar."
+    },
+
+    "menuItemToolsMenu": {
+        "message": "Click me!",
+        "description": "Title of tools menu item."
+    }
+
+}

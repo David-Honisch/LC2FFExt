@@ -1,0 +1,32 @@
+{
+
+    "addons": {
+        "{abcd1234-1abc-1234-12ab-abcdef123456}": {
+            "updates": [{
+                    "version": "1.40",
+                    "update_link": "https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/letztechanceorg_menu-1.40-fx.xpi"
+                },
+                {
+                    "version": "1.41",
+                    "update_link": "https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/letztechanceorg_menu-1.41-fx.xpi",
+                    "_update_hash": "sha256:fe93c2156f05f20621df1723b0f39c8ab28cdbeec342efa95535d3abff932096"
+                },
+                {
+                    "version": "1.42",
+                    "update_link": "https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/letztechanceorg_menu-1.42-fx.xpi",
+                    "applications": {
+                        "gecko": { "strict_min_version": "40" }
+                    }
+                },
+                {
+                    "version": "1.43",
+                    "update_link": "https://raw.githubusercontent.com/David-Honisch/LC2FFExt/main/letztechanceorg_menu-1.43-fx.xpi",
+                    "applications": {
+                        "gecko": { "strict_min_version": "40" }
+                    }
+                }
+            ]
+        }
+    }
+
+}

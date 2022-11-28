@@ -1,7 +1,0 @@
-{
-  "name": "ping_pong",
-  "description": "LC host for native messaging",
-  "path": "D:\\xampp\\htdocs\\LC2FFExt\\app\\ping_pong_win.bat",
-  "type": "stdio",
-  "allowed_extensions": [ "lc2ping_pong@www.letztechance.org" ]
-}
